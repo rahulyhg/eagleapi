@@ -18,7 +18,8 @@ class CreateObjectivesTable extends Migration
             $table->string('content');
             $table->date('start_date');
             $table->date('end_date');
-            $table->foreign('unit_id')->references('id')->on('unit');
+            $table->unsignedBigInteger('unit_id');
+            $table->foreign('unit_id')->references('id')->on('units');
             $table->timestamps();
         });
     }

@@ -20,6 +20,7 @@ class CreateIndGoalsTable extends Migration
             $table->string('content');
             $table->boolean('approved');
             $table->boolean('status');
+            $table->unsignedBigInteger('employee_id');
             $table->foreign('employee_id')->references('id')->on('users');
             $table->timestamps();
         });

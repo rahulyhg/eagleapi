@@ -17,6 +17,7 @@ class CreateIPMSTable extends Migration
             $table->bigIncrements('id');
             $table->date('start_date');
             $table->date('end_date');
+            $table->unsignedBigInteger('employee_id');
             $table->foreign('employee_id')->references('id')->on('users');
             $table->timestamps();
         });

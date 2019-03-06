@@ -18,7 +18,8 @@ class CreateKeyResultsTable extends Migration
             $table->string('content');
             $table->date('start_date');
             $table->date('end_date');
-            $table->foreign('objective_id')->references('id')->on('objective');
+            $table->unsignedBigInteger('objective_id');
+            $table->foreign('objective_id')->references('id')->on('objectives');
             $table->timestamps();
         });
     }

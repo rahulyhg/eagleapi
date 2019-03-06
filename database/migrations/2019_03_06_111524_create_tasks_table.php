@@ -16,12 +16,15 @@ class CreateTasksTable extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('content');
-            $table->foreign('employee_id')->references('id')->on('employees');
             $table->integer('rating');
             $table->boolean('status');
             $table->boolean('approved');
-            $table->boolean('goal_id')->references('id')->on('ind_goals');
-            $table->boolean('ipm_id')->references('id')->on('ipms');
+            $table->unsignedBigInteger('employee_id');
+            $table->unsignedBigInteger('goal_id');
+            $table->unsignedBigInteger('ipm_id');
+            $table->foreign('employee_id')->references('id')->on('users');
+            $table->foreign('goal_id')->references('id')->on('ind_goals');
+            $table->foreign('ipm_id')->references('id')->on('ipms');
             $table->timestamps();
         });
     }
