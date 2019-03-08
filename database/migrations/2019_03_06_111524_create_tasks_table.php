@@ -19,6 +19,7 @@ class CreateTasksTable extends Migration
             $table->integer('rating');
             $table->boolean('status');
             $table->boolean('approved');
+            $table->string('hours');
             $table->unsignedBigInteger('employee_id');
             $table->unsignedBigInteger('goal_id');
             $table->unsignedBigInteger('ipm_id');

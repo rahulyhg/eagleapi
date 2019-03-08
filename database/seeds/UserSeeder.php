@@ -14,20 +14,24 @@ class UserSeeder extends Seeder
     public function run()
     {
         $admin_role = new Role([
+            "id" => 1,
             "name" => "Admin",
             "permissions" => "Full Control"
         ]);
         $admin_role->save();
         Role::create([
+            "id" => 2,
             "name" => "Unit Lead",
             "permissions" => "Control Team OKR's"
         ]);
         Role::create([
+            "id" => 3,
             "name" => "HR",
             "permissions" => "Approve Personal Goals"
         ]);
         Role::create([
-           "name" => "employee",
+            "id" => 4,
+            "name" => "employee",
             "permissions" => "Create IPM and tasks"
         ]);
         $user = new User([
@@ -40,6 +44,7 @@ class UserSeeder extends Seeder
             "phone"=>"+2348080808080",
         ]);
         $user->save();
+        $user->createToken($user->email)->accessToken;
         $user->role()->associate($admin_role);
     }
 }
