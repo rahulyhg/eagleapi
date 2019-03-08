@@ -1,5 +1,6 @@
 <?php
 
+use App\Constants;
 use Illuminate\Database\Seeder;
 use App\User;
 use App\Role;
@@ -35,11 +36,13 @@ class UserSeeder extends Seeder
             "permissions" => "Create IPM and tasks"
         ]);
         $user = new User([
+            "id" => Constants::default_admin_id,
             "surname"=>"Admin",
             "firstname"=>"Chief",
             "password"=> bcrypt("asdfghjk"),
             "gender"=>"default",
             "job_title"=>"Master",
+            "unit_id"=>Constants::administration_unit_id,
             "email"=>"chief@dreamlabs.com.ng",
             "phone"=>"+2348080808080",
         ]);

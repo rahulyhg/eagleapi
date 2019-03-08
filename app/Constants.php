@@ -11,8 +11,12 @@ namespace App;
 
 class Constants
 {
-    public static $admin_id = 1;
-    public static $unit_lead_id = 2;
-    public static $hr_id = 3;
-    public static $employee_id = 4;
+    const default_admin_id = 1;
+    const admin_role_id = 1;
+    const unit_lead_role_id = 2;
+    const hr_role_id = 3;
+    const employee_role_id = 4;
+    const administration_unit_id = 1;
+    const engineering_unit_id = 2;
+    const business_unit_id = 3;
 }
