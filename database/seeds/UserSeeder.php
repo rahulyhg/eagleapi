@@ -37,14 +37,13 @@ class UserSeeder extends Seeder
         $user = new User([
             "surname"=>"Admin",
             "firstname"=>"Chief",
-            "password"=>"asdfghjk",
+            "password"=> bcrypt("asdfghjk"),
             "gender"=>"default",
             "job_title"=>"Master",
             "email"=>"chief@dreamlabs.com.ng",
             "phone"=>"+2348080808080",
         ]);
         $user->save();
-        $user->createToken($user->email)->accessToken;
         $user->role()->associate($admin_role);
     }
 }

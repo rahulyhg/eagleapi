@@ -11,5 +11,8 @@ namespace App;
 
 class Constants
 {
-    
+    public static $admin_id = 1;
+    public static $unit_lead_id = 2;
+    public static $hr_id = 3;
+    public static $employee_id = 4;
 }
