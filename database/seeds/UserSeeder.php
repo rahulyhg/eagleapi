@@ -46,7 +46,7 @@ class UserSeeder extends Seeder
             "email"=>"chief@dreamlabs.com.ng",
             "phone"=>"+2348080808080",
         ]);
-        $user->save();
         $user->role()->associate($admin_role);
+        $user->save();
     }
 }

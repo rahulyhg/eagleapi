@@ -17,7 +17,7 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
-        if (auth()->user()->id == Constants::admin_role_id) {
+        if (auth()->user()->role->id == Constants::admin_role_id) {
             $this->validate($request, [
                 'surname' => 'required|string',
                 'firstname' => 'required|string',
