@@ -20,7 +20,7 @@ Route::middleware('auth:api')->prefix('v1')->group(function () {
     Route::resource('goals', 'GoalController');
     Route::resource('ind_goals', 'IndGoalController');
     Route::resource('ipms', 'IPMController');
-    Route::resource('keyresults', 'KayResultController');
+    Route::resource('keyresults', 'KeyResultController');
     Route::resource('objectives', 'ObjectiveController');
     Route::resource('roles', 'RoleController');
     Route::resource('tasks', 'TaskController');

@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\IndGoal;
 use Illuminate\Http\Request;
 
+/**
+ * @resource IndGoal
+ *
+ * This is the Model for the employee Individual Goals
+ * Attributes are: content(String), start_date(date), end_date(date), approved(boolean), status(boolean) to indicate completion, employee_id(integer)
+ */
 class IndGoalController extends Controller
 {
     /**

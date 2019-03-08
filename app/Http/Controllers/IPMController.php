@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\IPM;
 use Illuminate\Http\Request;
 
+/**
+ * @resource IPM
+ *
+ * This is the Model for the employee Individual IPMs
+ * Attributes are: content(String), start_date(date), end_date(date), employee_id(integer)
+ */
 class IPMController extends Controller
 {
     /**

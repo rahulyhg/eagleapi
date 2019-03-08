@@ -5,6 +5,13 @@ namespace App\Http\Controllers;
 use App\Goal;
 use Illuminate\Http\Request;
 
+
+/**
+ * @resource Goal
+ *
+ * This is the Model for the overall Company goals
+ * Attributes are: content(String), start_date(date), end_date(date)
+ */
 class GoalController extends Controller
 {
     /**
