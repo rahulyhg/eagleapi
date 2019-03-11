@@ -18,7 +18,7 @@ class AuthController extends Controller
     public function store(Request $request)
     {
         if (auth()->user()->role->id == Constants::admin_role_id) {
-            $this->validate($request, [
+            $validatedData = $request->validate([
                 'surname' => 'required|string',
                 'firstname' => 'required|string',
                 'email' => 'required|email|unique:users',
@@ -46,7 +46,7 @@ class AuthController extends Controller
             else $user->supervisor_id = Constants::default_admin_id;
             $user->save();
             $token = $user->createToken($user->email)->accessToken;
-            return response()->json(['success' => true,'token' => "Bearer " . $token], 200);
+            return response()->json(['success' => true,'user'=>$user,'token' => "Bearer " . $token], 200);
         } else {
             return response()->json([
                 'success' => false,
@@ -81,7 +81,7 @@ class AuthController extends Controller
             $token = auth()->user()->createToken($request->email)->accessToken;
             return response()->json(['success' => true,'token' => 'Bearer ' . $token], 200);
         } else {
-            return response()->json(['success' => false,'error' => 'Unauthorised'], 401);
+            return response()->json(['success' => false,'message' => 'The login details are incorrect'], 401);
         }
     }
 

@@ -52,9 +52,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -94,9 +92,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -170,7 +166,351 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Unauthenticated."
+    "message": "No query results for model [App\\Goal].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
 }
 ```
 
@@ -212,7 +552,351 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Unauthenticated."
+    "message": "No query results for model [App\\Goal].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
 }
 ```
 
@@ -325,9 +1009,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -367,9 +1049,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -442,9 +1122,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -484,9 +1162,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -598,9 +1274,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -640,9 +1314,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -716,7 +1388,351 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Unauthenticated."
+    "message": "No query results for model [App\\IndGoal].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
 }
 ```
 
@@ -758,7 +1774,351 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Unauthenticated."
+    "message": "No query results for model [App\\IndGoal].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
 }
 ```
 
@@ -871,9 +2231,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -913,9 +2271,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -988,9 +2344,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1030,9 +2384,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1144,9 +2496,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1186,9 +2536,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1262,7 +2610,351 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Unauthenticated."
+    "message": "No query results for model [App\\Objective].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
 }
 ```
 
@@ -1304,7 +2996,351 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Unauthenticated."
+    "message": "No query results for model [App\\Objective].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
 }
 ```
 
@@ -1417,9 +3453,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1459,9 +3493,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1534,9 +3566,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1576,9 +3606,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1690,9 +3718,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1732,9 +3758,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -1808,7 +3832,351 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Unauthenticated."
+    "message": "No query results for model [App\\Task].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
 }
 ```
 
@@ -1850,7 +4218,351 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Unauthenticated."
+    "message": "No query results for model [App\\Task].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
 }
 ```
 
@@ -1963,9 +4675,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -2005,9 +4715,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -2080,9 +4788,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -2122,9 +4828,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -2203,6 +4907,577 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_0f2a8b1271170295a5eb880cfbc1a49a -->
 
+#User
+
+This is the Model for the User (Employee)
+Attributes are: surname(String), firstname(string), email(string), phone(string),unit_id(integer),gender(string),role_id(integer),password and job_title(string)
+<!-- START_64a1f52a58ef974839ac5dff1107c0ba -->
+## Display a listing of the resource. Access Level (Logged in)
+
+> Example request:
+
+```bash
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/user/all" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/all",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "surname": "Admin",
+            "firstname": "Fuuunke",
+            "job_title": "Master",
+            "gender": "default",
+            "phone": "+2348080808080",
+            "unit_id": 1,
+            "role_id": 1,
+            "supervisor_id": null,
+            "email": "chief@dreamlabs.com.ng",
+            "email_verified_at": null,
+            "created_at": "2019-03-11 08:57:14",
+            "updated_at": "2019-03-11 10:46:04"
+        },
+        {
+            "id": 2,
+            "surname": "Chisos is lord",
+            "firstname": "Fuuuuuuuuuuunke",
+            "job_title": "Engineer",
+            "gender": "female",
+            "phone": "+442299504366",
+            "unit_id": 2,
+            "role_id": 4,
+            "supervisor_id": 1,
+            "email": "funke@dreamlabs.com.ng",
+            "email_verified_at": null,
+            "created_at": "2019-03-11 09:46:37",
+            "updated_at": "2019-03-11 10:53:59"
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/v1/user/all`
+
+`HEAD api/v1/user/all`
+
+
+<!-- END_64a1f52a58ef974839ac5dff1107c0ba -->
+
+<!-- START_62cc83659a855b398818615e9c823ca6 -->
+## Display the details of a particular User
+including ipms, goals, tasks, supervises, unit and supervisor. Access Level Admin or HR or owner of account
+
+> Example request:
+
+```bash
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/user/{id}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/{id}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "message": "Trying to get property 'role' of non-object",
+    "exception": "ErrorException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Http\\Controllers\\UserController.php",
+    "line": 42,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Http\\Controllers\\UserController.php",
+            "line": 42,
+            "function": "handleError",
+            "class": "Illuminate\\Foundation\\Bootstrap\\HandleExceptions",
+            "type": "->"
+        },
+        {
+            "function": "show",
+            "class": "App\\Http\\Controllers\\UserController",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+            "line": 54,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "line": 45,
+            "function": "callAction",
+            "class": "Illuminate\\Routing\\Controller",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 219,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\ControllerDispatcher",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 176,
+            "function": "runController",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 680,
+            "function": "run",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
+}
+```
+
+### HTTP Request
+`GET api/v1/user/{id}`
+
+`HEAD api/v1/user/{id}`
+
+
+<!-- END_62cc83659a855b398818615e9c823ca6 -->
+
+<!-- START_d54ccdf8c8f2ffd18c7102abdf6bacda -->
+## Update the authenticated User.
+
+Don't send ID. User will be detected based on Token.
+
+> Example request:
+
+```bash
+curl -X PATCH "https://eagleapi.herokuapp.com/api/v1/user/update" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/update",
+    "method": "PATCH",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`PATCH api/v1/user/update`
+
+
+<!-- END_d54ccdf8c8f2ffd18c7102abdf6bacda -->
+
+<!-- START_ab0589afb7da54197b180fcc16eb9fdd -->
+## Update a specified User ID.
+
+> Example request:
+
+```bash
+curl -X PATCH "https://eagleapi.herokuapp.com/api/v1/user/admin_update/{id}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/admin_update/{id}",
+    "method": "PATCH",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`PATCH api/v1/user/admin_update/{id}`
+
+
+<!-- END_ab0589afb7da54197b180fcc16eb9fdd -->
+
 #Vision
 
 This is the Model for the Vision
@@ -2236,9 +5511,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -2278,9 +5551,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "message": "Unauthenticated."
-}
+null
 ```
 
 ### HTTP Request
@@ -2354,30 +5625,44 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 124,
+    "message": "No query results for model [App\\Vision].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
     "trace": [
         {
-            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 53,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
             "type": "->"
         },
         {
-            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 163,
-            "function": "handle",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
-            "line": 53,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -2726,30 +6011,44 @@ $.ajax(settings).done(function (response) {
 
 ```json
 {
-    "message": "Too Many Attempts.",
-    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
-    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-    "line": 124,
+    "message": "No query results for model [App\\Vision].",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 200,
     "trace": [
         {
-            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
-            "line": 53,
-            "function": "buildException",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 176,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
             "type": "->"
         },
         {
-            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
-            "line": 163,
-            "function": "handle",
-            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "file": "C:\\xampp\\php\\www\\eagleapi\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
             "type": "->"
         },
         {
             "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
-            "line": 53,
-            "function": "Illuminate\\Pipeline\\{closure}",
-            "class": "Illuminate\\Pipeline\\Pipeline",
+            "line": 83,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 55,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
@@ -3137,6 +6436,117 @@ $.ajax(settings).done(function (response) {
 <!-- END_958a62fe99ca83e8e8a847e4435c6a62 -->
 
 #general
+<!-- START_661673ec7098be811ab1cdb7e9bcc0fa -->
+## Handles Registration Request
+If supervisor_id is not set, it uses the admin id (1) as the supervisor_id. This can be updated of course
+
+> Example request:
+
+```bash
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/create" \
+-H "Accept: application/json" \
+    -d "surname"="quia" \
+    -d "firstname"="quia" \
+    -d "email"="wyman.bernadine@example.org" \
+    -d "phone"="quia" \
+    -d "unit_id"="quia" \
+    -d "gender"="quia" \
+    -d "role_id"="quia" \
+    -d "password"="quia" \
+    -d "job_title"="quia" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/create",
+    "method": "POST",
+    "data": {
+        "surname": "quia",
+        "firstname": "quia",
+        "email": "wyman.bernadine@example.org",
+        "phone": "quia",
+        "unit_id": "quia",
+        "gender": "quia",
+        "role_id": "quia",
+        "password": "quia",
+        "job_title": "quia"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/v1/user/create`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    surname | string |  required  | 
+    firstname | string |  required  | 
+    email | email |  required  | 
+    phone | string |  required  | 
+    unit_id | string |  required  | 
+    gender | string |  required  | 
+    role_id | string |  required  | 
+    password | string |  required  | 
+    job_title | string |  required  | 
+
+<!-- END_661673ec7098be811ab1cdb7e9bcc0fa -->
+
+<!-- START_8e5610ed60ab9da974a82ef653652d7e -->
+## Returns Authenticated User Details
+
+> Example request:
+
+```bash
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/user/details" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/details",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "success": true,
+    "user": null
+}
+```
+
+### HTTP Request
+`GET api/v1/user/details`
+
+`HEAD api/v1/user/details`
+
+
+<!-- END_8e5610ed60ab9da974a82ef653652d7e -->
+
 <!-- START_7a184547882598fc164c10be7745584b -->
 ## Handles Login Request
 FOR SUCCESSFUL REQUEST: Status code 200. Wrong password: Status code 401 (Unauthorized)
@@ -3188,80 +6598,4 @@ Parameter | Type | Status | Description
     password | string |  required  | 
 
 <!-- END_7a184547882598fc164c10be7745584b -->
-
-<!-- START_661673ec7098be811ab1cdb7e9bcc0fa -->
-## Handles Registration Request
-If supervisor_id is not set, it uses the admin id (1) as the supervisor_id. This can be updated of course
-
-> Example request:
-
-```bash
-curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/user/create",
-    "method": "POST",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/v1/user/create`
-
-
-<!-- END_661673ec7098be811ab1cdb7e9bcc0fa -->
-
-<!-- START_8e5610ed60ab9da974a82ef653652d7e -->
-## Returns Authenticated User Details
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/user/details" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/user/details",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/user/details`
-
-`HEAD api/v1/user/details`
-
-
-<!-- END_8e5610ed60ab9da974a82ef653652d7e -->
 

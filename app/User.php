@@ -53,9 +53,9 @@ class User extends Authenticatable
         return $this->hasMany(Task::class,'employee_id');
     }
     public function supervisor(){
-        return $this->belongsTo(User::class,'employee_id');
+        return $this->belongsTo(User::class,'supervisor_id');
     }
     public function supervises(){
-        return $this->hasMany(User::class,'employee_id');
+        return $this->hasMany(User::class,'supervisor_id');
     }
 }
