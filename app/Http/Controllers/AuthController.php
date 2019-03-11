@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Constants;
+use App\Unit;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -100,5 +101,68 @@ class AuthController extends Controller
     public function details()
     {
         return response()->json(['success' => true,'user' => auth()->user()], 200);
+    }
+
+    /**
+     * Sets User as Unit Lead
+     *
+     * @param Unit $unit
+     * @param User $user
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function set_unit_lead(Unit $unit,User $user)
+    {
+        if (auth()->user()->role->id == Constants::admin_role_id) {
+            if (!$unit) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Unit with id ' . $unit->id . ' not found'
+                ], 400);
+            }
+            if (!$user) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Unit with id ' . $user->id . ' not found'
+                ], 400);
+            }
+            $updated_user = $user->role_id = Constants::unit_lead_role_id;
+            $updated_unit = $unit->unit_lead = $user->id;
+            if ($updated_user && $updated_unit)
+                return response()->json([
+                    'success' => true,
+                    'message' => 'User set as Unit Lead for '. $unit->name
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'User could not be set'
+                ], 500);
+        }else {
+            return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
+        }
+    }
+    public function set_hr(User $user)
+    {
+        if (auth()->user()->role->id == Constants::hr_role_id) {
+            if (!$user) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Unit with id ' . $user->id . ' not found'
+                ], 400);
+            }
+            $updated_user = $user->role_id = Constants::unit_lead_role_id;
+            if ($updated_user)
+                return response()->json([
+                    'success' => true,
+                    'message' => 'User set as HR'
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'User could not be set as HR'
+                ], 500);
+        }else {
+            return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
+        }
     }
 }

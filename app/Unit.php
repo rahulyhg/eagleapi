@@ -13,4 +13,10 @@ class Unit extends Model
     public function lead(){
         return $this->belongsTo(User::class,'unit_lead');
     }
+    public function objectives(){
+        return $this->hasMany(Objective::class);
+    }
+    public function key_results(){
+        return $this->hasManyThrough('App\KeyResult','App\Objective');
+    }
 }

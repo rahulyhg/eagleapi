@@ -23,7 +23,7 @@ class UnitController extends Controller
     {
         return response()->json([
             'success' => true,
-            'data' => Unit::with(['lead','employees'])->get()
+            'data' => Unit::with(['lead','employees','objectives','key_results'])->get()
         ],200);
     }
 

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Constants;
 use App\Objective;
+use App\Unit;
 use Illuminate\Http\Request;
 
 /**
@@ -20,12 +22,15 @@ class ObjectiveController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json([
+            'success' => true,
+            'data' => Objective::with(['unit','key_results'])->get()
+        ],200);
     }
 
     /**
      * Show the form for creating a new resource.
-     *
+     *@hideFromAPIDocumentation
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -41,7 +46,33 @@ class ObjectiveController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'content' => 'required',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date',
+            'unit_id' => 'required',
+        ]);
+        $unit = Unit::find($request->get('unit_id'));
+        if (auth()->user()->role->id == Constants::admin_role_id ||
+            (auth()->user()->role->id == Constants::unit_lead_role_id && auth()->user()->id == $unit->unit_lead)){
+            $objective = new Objective();
+            $objective->content = $request->get('content');
+            $objective->start_date = $request->get('start_date');
+            $objective->end_date = $request->get('end_date');
+            $objective->unit_id = $request->get('unit_id');
+            if ($objective->save())
+                return response()->json([
+                    'success' => true,
+                    'data' => $objective
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Objective could not be added'
+                ], 500);
+        }else {
+            return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
+        }
     }
 
     /**
@@ -52,12 +83,22 @@ class ObjectiveController extends Controller
      */
     public function show(Objective $objective)
     {
-        //
+        if (!$objective) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Objective with id ' . $objective->id . ' not found'
+            ], 400);
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => Objective::with(['key_results','unit'])->find($objective->id)
+        ], 200);
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
+     *@hideFromAPIDocumentation
      * @param  \App\Objective  $objective
      * @return \Illuminate\Http\Response
      */
@@ -75,12 +116,33 @@ class ObjectiveController extends Controller
      */
     public function update(Request $request, Objective $objective)
     {
-        //
+        if (auth()->user()->role->id == Constants::admin_role_id ||
+            (auth()->user()->role->id == Constants::unit_lead_role_id && auth()->user()->id == $objective->unit->unit_lead)){
+            if (!$objective) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Objective with id ' . $objective->id . ' not found'
+                ], 400);
+            }
+            $updated = $objective->fill($request->all())->save();
+            if ($updated)
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Objective details updated'
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Objective could not be updated'
+                ], 500);
+        }else {
+            return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
-     *
+     *@hideFromAPIDocumentation
      * @param  \App\Objective  $objective
      * @return \Illuminate\Http\Response
      */

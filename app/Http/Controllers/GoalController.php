@@ -46,28 +46,27 @@ class GoalController extends Controller
      */
     public function store(Request $request)
     {
-        if (auth()->user()->role->id == Constants::admin_role_id){
-            $validatedData = $request->validate([
-                'content' => 'required',
-                'start_date' => 'required|date',
-                'end_date' => 'required|date'
-            ]);
 
+        $validatedData = $request->validate([
+            'content' => 'required',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date'
+        ]);
+        if (auth()->user()->role->id == Constants::admin_role_id){
             $goal = new Goal();
             $goal->content = $request->get('content');
             $goal->start_date = $request->get('start_date');
             $goal->end_date = $request->get('end_date');
-
-            if ($goal->save())
-                return response()->json([
-                    'success' => true,
-                    'data' => $goal
-                ]);
-            else
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Goal could not be added'
-                ], 500);
+                if ($goal->save())
+                    return response()->json([
+                        'success' => true,
+                        'data' => $goal
+                    ],200);
+                else
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Goal could not be added'
+                    ], 500);
         }else {
             return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
         }
@@ -106,7 +105,7 @@ class GoalController extends Controller
     }
 
     /**
-     * Update the specified Goal in storage. Access Level (Admin)
+     * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Goal  $goal

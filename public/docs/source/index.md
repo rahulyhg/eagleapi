@@ -323,7 +323,7 @@ $.ajax(settings).done(function (response) {
 <!-- END_f1c03d9b9405944f13a51eb42b7f683f -->
 
 <!-- START_0c9c0db58496769199051f473940bda0 -->
-## Update the specified Goal in storage. Access Level (Admin)
+## Update the specified resource in storage.
 
 > Example request:
 
@@ -1219,48 +1219,6 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_672f62bfe5b3fffc12b7107b4d6a5312 -->
-
-<!-- START_33bc0295b605e3d34dff0a819d35881b -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/objectives/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/objectives/create`
-
-`HEAD api/v1/objectives/create`
-
-
-<!-- END_33bc0295b605e3d34dff0a819d35881b -->
 
 <!-- START_c2370f8732acbfbb581ad054fa40cfcc -->
 ## Store a newly created resource in storage.
