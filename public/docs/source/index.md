@@ -23,6 +23,58 @@ Welcome to the generated API reference.
 
 This is the Model for the User (Employee)
 Attributes are: surname(String), firstname(string), email(string), phone(string),unit_id(integer),gender(string),role_id(integer),password and job_title(string)
+<!-- START_7a184547882598fc164c10be7745584b -->
+## Handles Login Request
+FOR SUCCESSFUL REQUEST: Status code 200. Wrong password: Status code 401 (Unauthorized)
+
+> Example request:
+
+```bash
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/login" \
+-H "Accept: application/json" \
+    -d "email"="clarabelle94@example.net" \
+    -d "password"="excepturi" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/login",
+    "method": "POST",
+    "data": {
+        "email": "clarabelle94@example.net",
+        "password": "excepturi"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`POST api/v1/user/login`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    email | email |  required  | 
+    password | string |  required  | 
+
+<!-- END_7a184547882598fc164c10be7745584b -->
+
 <!-- START_661673ec7098be811ab1cdb7e9bcc0fa -->
 ## Handles Registration Request
 If supervisor_id is not set, it uses the admin id (1) as the supervisor_id. This can be updated of course
@@ -132,58 +184,6 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_8e5610ed60ab9da974a82ef653652d7e -->
-
-<!-- START_7a184547882598fc164c10be7745584b -->
-## Handles Login Request
-FOR SUCCESSFUL REQUEST: Status code 200. Wrong password: Status code 401 (Unauthorized)
-
-> Example request:
-
-```bash
-curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/login" \
--H "Accept: application/json" \
-    -d "email"="clarabelle94@example.net" \
-    -d "password"="excepturi" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/user/login",
-    "method": "POST",
-    "data": {
-        "email": "clarabelle94@example.net",
-        "password": "excepturi"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-null
-```
-
-### HTTP Request
-`POST api/v1/user/login`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    email | email |  required  | 
-    password | string |  required  | 
-
-<!-- END_7a184547882598fc164c10be7745584b -->
 
 #Goal
 
@@ -323,7 +323,7 @@ $.ajax(settings).done(function (response) {
 <!-- END_f1c03d9b9405944f13a51eb42b7f683f -->
 
 <!-- START_0c9c0db58496769199051f473940bda0 -->
-## Update the specified resource in storage.
+## Update the specified Goal in storage. Access Level (Admin)
 
 > Example request:
 
@@ -635,7 +635,7 @@ $.ajax(settings).done(function (response) {
 This is the Model for the employee Individual Goals
 Attributes are: content(String), start_date(date), end_date(date), approved(boolean), status(boolean) to indicate completion, employee_id(integer)
 <!-- START_7152fa331f5db522d153dca391bcf11b -->
-## Display a listing of the resource.
+## Display a listing of the Individual Goals.
 
 > Example request:
 
@@ -676,48 +676,6 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_7152fa331f5db522d153dca391bcf11b -->
 
-<!-- START_846e9ee0686b4c204a3d6254438ca516 -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/ind_goals/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/ind_goals/create`
-
-`HEAD api/v1/ind_goals/create`
-
-
-<!-- END_846e9ee0686b4c204a3d6254438ca516 -->
-
 <!-- START_fb3867d8373f0f7181bed48f51cca469 -->
 ## Store a newly created resource in storage.
 
@@ -725,7 +683,11 @@ $.ajax(settings).done(function (response) {
 
 ```bash
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/ind_goals" \
--H "Accept: application/json"
+-H "Accept: application/json" \
+    -d "content"="voluptas" \
+    -d "start_date"="2007-08-07" \
+    -d "end_date"="2007-08-07" \
+
 ```
 
 ```javascript
@@ -734,6 +696,11 @@ var settings = {
     "crossDomain": true,
     "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals",
     "method": "POST",
+    "data": {
+        "content": "voluptas",
+        "start_date": "2007-08-07",
+        "end_date": "2007-08-07"
+},
     "headers": {
         "accept": "application/json"
     }
@@ -748,6 +715,13 @@ $.ajax(settings).done(function (response) {
 ### HTTP Request
 `POST api/v1/ind_goals`
 
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    content | string |  required  | 
+    start_date | date |  required  | 
+    end_date | date |  required  | 
 
 <!-- END_fb3867d8373f0f7181bed48f51cca469 -->
 
@@ -793,48 +767,6 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_a404bda4737a21ce8d297efafd154e8b -->
 
-<!-- START_d112d4a8aeb6c0f17d776e25c3e1bf55 -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/ind_goals/{ind_goal}/edit`
-
-`HEAD api/v1/ind_goals/{ind_goal}/edit`
-
-
-<!-- END_d112d4a8aeb6c0f17d776e25c3e1bf55 -->
-
 <!-- START_066c27f4f59d8c7196cd32a613e83e56 -->
 ## Update the specified resource in storage.
 
@@ -869,39 +801,6 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_066c27f4f59d8c7196cd32a613e83e56 -->
-
-<!-- START_5fd649000d8e1d77627eaa8b6eb1164e -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/ind_goals/{ind_goal}`
-
-
-<!-- END_5fd649000d8e1d77627eaa8b6eb1164e -->
 
 #KeyResult
 
