@@ -15,6 +15,7 @@ class CreateIPMSTable extends Migration
     {
         Schema::create('ipms', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('week_name');
             $table->date('start_date');
             $table->date('end_date');
             $table->unsignedBigInteger('employee_id');
