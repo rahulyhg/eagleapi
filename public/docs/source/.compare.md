@@ -29,7 +29,7 @@ Attributes are: content(String), start_date(date), end_date(date)
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/goals" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/goals" \
 -H "Accept: application/json"
 ```
 
@@ -37,7 +37,7 @@ curl -X GET "http://localhost:8000/api/v1/goals" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/goals",
+    "url": "https://eagleapi.herokuapp.com/api/v1/goals",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -52,7 +52,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -69,7 +71,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/goals/create" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/goals/create" \
 -H "Accept: application/json"
 ```
 
@@ -77,7 +79,7 @@ curl -X GET "http://localhost:8000/api/v1/goals/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/goals/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/goals/create",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -92,7 +94,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -109,7 +113,7 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/goals" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/goals" \
 -H "Accept: application/json"
 ```
 
@@ -117,7 +121,7 @@ curl -X POST "http://localhost:8000/api/v1/goals" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/goals",
+    "url": "https://eagleapi.herokuapp.com/api/v1/goals",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -142,7 +146,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/goals/{goal}" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/goals/{goal}" \
 -H "Accept: application/json"
 ```
 
@@ -150,7 +154,7 @@ curl -X GET "http://localhost:8000/api/v1/goals/{goal}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/goals/{goal}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/goals/{goal}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -165,7 +169,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -182,7 +188,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/goals/{goal}/edit" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/goals/{goal}/edit" \
 -H "Accept: application/json"
 ```
 
@@ -190,7 +196,7 @@ curl -X GET "http://localhost:8000/api/v1/goals/{goal}/edit" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/goals/{goal}/edit",
+    "url": "https://eagleapi.herokuapp.com/api/v1/goals/{goal}/edit",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -205,7 +211,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -222,7 +230,7 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/goals/{goal}" \
+curl -X PUT "https://eagleapi.herokuapp.com/api/v1/goals/{goal}" \
 -H "Accept: application/json"
 ```
 
@@ -230,7 +238,7 @@ curl -X PUT "http://localhost:8000/api/v1/goals/{goal}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/goals/{goal}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/goals/{goal}",
     "method": "PUT",
     "headers": {
         "accept": "application/json"
@@ -257,7 +265,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X DELETE "http://localhost:8000/api/v1/goals/{goal}" \
+curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/goals/{goal}" \
 -H "Accept: application/json"
 ```
 
@@ -265,7 +273,7 @@ curl -X DELETE "http://localhost:8000/api/v1/goals/{goal}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/goals/{goal}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/goals/{goal}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -294,7 +302,7 @@ Attributes are: content(String), start_date(date), end_date(date), employee_id(i
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/ipms" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/ipms" \
 -H "Accept: application/json"
 ```
 
@@ -302,7 +310,7 @@ curl -X GET "http://localhost:8000/api/v1/ipms" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ipms",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ipms",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -317,7 +325,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -334,7 +344,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/ipms/create" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/ipms/create" \
 -H "Accept: application/json"
 ```
 
@@ -342,7 +352,7 @@ curl -X GET "http://localhost:8000/api/v1/ipms/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ipms/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ipms/create",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -357,7 +367,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -374,7 +386,7 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/ipms" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/ipms" \
 -H "Accept: application/json"
 ```
 
@@ -382,7 +394,7 @@ curl -X POST "http://localhost:8000/api/v1/ipms" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ipms",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ipms",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -407,7 +419,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/ipms/{ipm}" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}" \
 -H "Accept: application/json"
 ```
 
@@ -415,7 +427,7 @@ curl -X GET "http://localhost:8000/api/v1/ipms/{ipm}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ipms/{ipm}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -430,7 +442,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -447,7 +461,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/ipms/{ipm}/edit" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}/edit" \
 -H "Accept: application/json"
 ```
 
@@ -455,7 +469,7 @@ curl -X GET "http://localhost:8000/api/v1/ipms/{ipm}/edit" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ipms/{ipm}/edit",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}/edit",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -470,7 +484,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -487,7 +503,7 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/ipms/{ipm}" \
+curl -X PUT "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}" \
 -H "Accept: application/json"
 ```
 
@@ -495,7 +511,7 @@ curl -X PUT "http://localhost:8000/api/v1/ipms/{ipm}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ipms/{ipm}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}",
     "method": "PUT",
     "headers": {
         "accept": "application/json"
@@ -522,7 +538,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X DELETE "http://localhost:8000/api/v1/ipms/{ipm}" \
+curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}" \
 -H "Accept: application/json"
 ```
 
@@ -530,7 +546,7 @@ curl -X DELETE "http://localhost:8000/api/v1/ipms/{ipm}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ipms/{ipm}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -559,7 +575,7 @@ Attributes are: content(String), start_date(date), end_date(date), approved(bool
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/ind_goals" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/ind_goals" \
 -H "Accept: application/json"
 ```
 
@@ -567,7 +583,7 @@ curl -X GET "http://localhost:8000/api/v1/ind_goals" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ind_goals",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -582,7 +598,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -599,7 +617,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/ind_goals/create" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/ind_goals/create" \
 -H "Accept: application/json"
 ```
 
@@ -607,7 +625,7 @@ curl -X GET "http://localhost:8000/api/v1/ind_goals/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ind_goals/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals/create",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -622,7 +640,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -639,7 +659,7 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/ind_goals" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/ind_goals" \
 -H "Accept: application/json"
 ```
 
@@ -647,7 +667,7 @@ curl -X POST "http://localhost:8000/api/v1/ind_goals" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ind_goals",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -672,7 +692,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/ind_goals/{ind_goal}" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}" \
 -H "Accept: application/json"
 ```
 
@@ -680,7 +700,7 @@ curl -X GET "http://localhost:8000/api/v1/ind_goals/{ind_goal}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ind_goals/{ind_goal}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -695,7 +715,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -712,7 +734,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/ind_goals/{ind_goal}/edit" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}/edit" \
 -H "Accept: application/json"
 ```
 
@@ -720,7 +742,7 @@ curl -X GET "http://localhost:8000/api/v1/ind_goals/{ind_goal}/edit" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ind_goals/{ind_goal}/edit",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}/edit",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -735,7 +757,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -752,7 +776,7 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/ind_goals/{ind_goal}" \
+curl -X PUT "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}" \
 -H "Accept: application/json"
 ```
 
@@ -760,7 +784,7 @@ curl -X PUT "http://localhost:8000/api/v1/ind_goals/{ind_goal}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ind_goals/{ind_goal}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}",
     "method": "PUT",
     "headers": {
         "accept": "application/json"
@@ -787,7 +811,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X DELETE "http://localhost:8000/api/v1/ind_goals/{ind_goal}" \
+curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}" \
 -H "Accept: application/json"
 ```
 
@@ -795,7 +819,7 @@ curl -X DELETE "http://localhost:8000/api/v1/ind_goals/{ind_goal}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/ind_goals/{ind_goal}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/ind_goals/{ind_goal}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -824,7 +848,7 @@ Attributes are: content(String), start_date(date), end_date(date), objective_id(
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/keyresults" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/keyresults" \
 -H "Accept: application/json"
 ```
 
@@ -832,7 +856,7 @@ curl -X GET "http://localhost:8000/api/v1/keyresults" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/keyresults",
+    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -847,7 +871,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -864,7 +890,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/keyresults/create" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/keyresults/create" \
 -H "Accept: application/json"
 ```
 
@@ -872,7 +898,7 @@ curl -X GET "http://localhost:8000/api/v1/keyresults/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/keyresults/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/create",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -887,7 +913,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -904,7 +932,7 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/keyresults" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/keyresults" \
 -H "Accept: application/json"
 ```
 
@@ -912,7 +940,7 @@ curl -X POST "http://localhost:8000/api/v1/keyresults" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/keyresults",
+    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -937,7 +965,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/keyresults/{keyresult}" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}" \
 -H "Accept: application/json"
 ```
 
@@ -945,7 +973,7 @@ curl -X GET "http://localhost:8000/api/v1/keyresults/{keyresult}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/keyresults/{keyresult}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -960,7 +988,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -977,7 +1007,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/keyresults/{keyresult}/edit" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}/edit" \
 -H "Accept: application/json"
 ```
 
@@ -985,7 +1015,7 @@ curl -X GET "http://localhost:8000/api/v1/keyresults/{keyresult}/edit" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/keyresults/{keyresult}/edit",
+    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}/edit",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1000,7 +1030,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1017,7 +1049,7 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/keyresults/{keyresult}" \
+curl -X PUT "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}" \
 -H "Accept: application/json"
 ```
 
@@ -1025,7 +1057,7 @@ curl -X PUT "http://localhost:8000/api/v1/keyresults/{keyresult}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/keyresults/{keyresult}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}",
     "method": "PUT",
     "headers": {
         "accept": "application/json"
@@ -1052,7 +1084,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X DELETE "http://localhost:8000/api/v1/keyresults/{keyresult}" \
+curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}" \
 -H "Accept: application/json"
 ```
 
@@ -1060,7 +1092,7 @@ curl -X DELETE "http://localhost:8000/api/v1/keyresults/{keyresult}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/keyresults/{keyresult}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -1089,7 +1121,7 @@ Attributes are: content(String), start_date(date), end_date(date), unit_id(integ
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/objectives" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/objectives" \
 -H "Accept: application/json"
 ```
 
@@ -1097,7 +1129,7 @@ curl -X GET "http://localhost:8000/api/v1/objectives" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/objectives",
+    "url": "https://eagleapi.herokuapp.com/api/v1/objectives",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1112,7 +1144,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1129,7 +1163,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/objectives/create" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/objectives/create" \
 -H "Accept: application/json"
 ```
 
@@ -1137,7 +1171,7 @@ curl -X GET "http://localhost:8000/api/v1/objectives/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/objectives/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/create",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1152,7 +1186,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1169,7 +1205,7 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/objectives" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/objectives" \
 -H "Accept: application/json"
 ```
 
@@ -1177,7 +1213,7 @@ curl -X POST "http://localhost:8000/api/v1/objectives" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/objectives",
+    "url": "https://eagleapi.herokuapp.com/api/v1/objectives",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -1202,7 +1238,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/objectives/{objective}" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}" \
 -H "Accept: application/json"
 ```
 
@@ -1210,7 +1246,7 @@ curl -X GET "http://localhost:8000/api/v1/objectives/{objective}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/objectives/{objective}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1225,7 +1261,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1242,7 +1280,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/objectives/{objective}/edit" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}/edit" \
 -H "Accept: application/json"
 ```
 
@@ -1250,7 +1288,7 @@ curl -X GET "http://localhost:8000/api/v1/objectives/{objective}/edit" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/objectives/{objective}/edit",
+    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}/edit",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1265,7 +1303,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1282,7 +1322,7 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/objectives/{objective}" \
+curl -X PUT "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}" \
 -H "Accept: application/json"
 ```
 
@@ -1290,7 +1330,7 @@ curl -X PUT "http://localhost:8000/api/v1/objectives/{objective}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/objectives/{objective}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}",
     "method": "PUT",
     "headers": {
         "accept": "application/json"
@@ -1317,7 +1357,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X DELETE "http://localhost:8000/api/v1/objectives/{objective}" \
+curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}" \
 -H "Accept: application/json"
 ```
 
@@ -1325,7 +1365,7 @@ curl -X DELETE "http://localhost:8000/api/v1/objectives/{objective}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/objectives/{objective}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -1354,7 +1394,7 @@ Attributes are: name(String), permissions(string)
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/roles" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/roles" \
 -H "Accept: application/json"
 ```
 
@@ -1362,7 +1402,7 @@ curl -X GET "http://localhost:8000/api/v1/roles" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/roles",
+    "url": "https://eagleapi.herokuapp.com/api/v1/roles",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1377,7 +1417,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1394,7 +1436,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/roles/create" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/roles/create" \
 -H "Accept: application/json"
 ```
 
@@ -1402,7 +1444,7 @@ curl -X GET "http://localhost:8000/api/v1/roles/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/roles/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/roles/create",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1417,7 +1459,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1434,7 +1478,7 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/roles" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/roles" \
 -H "Accept: application/json"
 ```
 
@@ -1442,7 +1486,7 @@ curl -X POST "http://localhost:8000/api/v1/roles" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/roles",
+    "url": "https://eagleapi.herokuapp.com/api/v1/roles",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -1467,7 +1511,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/roles/{role}" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/roles/{role}" \
 -H "Accept: application/json"
 ```
 
@@ -1475,7 +1519,7 @@ curl -X GET "http://localhost:8000/api/v1/roles/{role}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/roles/{role}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/roles/{role}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1490,7 +1534,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1507,7 +1553,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/roles/{role}/edit" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/roles/{role}/edit" \
 -H "Accept: application/json"
 ```
 
@@ -1515,7 +1561,7 @@ curl -X GET "http://localhost:8000/api/v1/roles/{role}/edit" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/roles/{role}/edit",
+    "url": "https://eagleapi.herokuapp.com/api/v1/roles/{role}/edit",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1530,7 +1576,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1547,7 +1595,7 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/roles/{role}" \
+curl -X PUT "https://eagleapi.herokuapp.com/api/v1/roles/{role}" \
 -H "Accept: application/json"
 ```
 
@@ -1555,7 +1603,7 @@ curl -X PUT "http://localhost:8000/api/v1/roles/{role}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/roles/{role}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/roles/{role}",
     "method": "PUT",
     "headers": {
         "accept": "application/json"
@@ -1582,7 +1630,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X DELETE "http://localhost:8000/api/v1/roles/{role}" \
+curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/roles/{role}" \
 -H "Accept: application/json"
 ```
 
@@ -1590,7 +1638,7 @@ curl -X DELETE "http://localhost:8000/api/v1/roles/{role}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/roles/{role}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/roles/{role}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -1619,7 +1667,7 @@ Attributes are: content(String), start_date(date), end_date(date), employee_id, 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/tasks" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/tasks" \
 -H "Accept: application/json"
 ```
 
@@ -1627,7 +1675,7 @@ curl -X GET "http://localhost:8000/api/v1/tasks" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/tasks",
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1642,7 +1690,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1659,7 +1709,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/tasks/create" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/tasks/create" \
 -H "Accept: application/json"
 ```
 
@@ -1667,7 +1717,7 @@ curl -X GET "http://localhost:8000/api/v1/tasks/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/tasks/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/create",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1682,7 +1732,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1699,7 +1751,7 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/tasks" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/tasks" \
 -H "Accept: application/json"
 ```
 
@@ -1707,7 +1759,7 @@ curl -X POST "http://localhost:8000/api/v1/tasks" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/tasks",
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -1732,7 +1784,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/tasks/{task}" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/tasks/{task}" \
 -H "Accept: application/json"
 ```
 
@@ -1740,7 +1792,7 @@ curl -X GET "http://localhost:8000/api/v1/tasks/{task}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/tasks/{task}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/{task}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1755,7 +1807,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1772,7 +1826,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/tasks/{task}/edit" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/tasks/{task}/edit" \
 -H "Accept: application/json"
 ```
 
@@ -1780,7 +1834,7 @@ curl -X GET "http://localhost:8000/api/v1/tasks/{task}/edit" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/tasks/{task}/edit",
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/{task}/edit",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1795,7 +1849,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1812,7 +1868,7 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/tasks/{task}" \
+curl -X PUT "https://eagleapi.herokuapp.com/api/v1/tasks/{task}" \
 -H "Accept: application/json"
 ```
 
@@ -1820,7 +1876,7 @@ curl -X PUT "http://localhost:8000/api/v1/tasks/{task}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/tasks/{task}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/{task}",
     "method": "PUT",
     "headers": {
         "accept": "application/json"
@@ -1847,7 +1903,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X DELETE "http://localhost:8000/api/v1/tasks/{task}" \
+curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/tasks/{task}" \
 -H "Accept: application/json"
 ```
 
@@ -1855,7 +1911,7 @@ curl -X DELETE "http://localhost:8000/api/v1/tasks/{task}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/tasks/{task}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/{task}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -1884,7 +1940,7 @@ Attributes are: name(String), unit_lead(integer) a foreign key for employee (Use
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/units" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/units" \
 -H "Accept: application/json"
 ```
 
@@ -1892,7 +1948,7 @@ curl -X GET "http://localhost:8000/api/v1/units" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/units",
+    "url": "https://eagleapi.herokuapp.com/api/v1/units",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1907,7 +1963,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1924,7 +1982,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/units/create" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/units/create" \
 -H "Accept: application/json"
 ```
 
@@ -1932,7 +1990,7 @@ curl -X GET "http://localhost:8000/api/v1/units/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/units/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/units/create",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -1947,7 +2005,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -1964,7 +2024,7 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/units" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/units" \
 -H "Accept: application/json"
 ```
 
@@ -1972,7 +2032,7 @@ curl -X POST "http://localhost:8000/api/v1/units" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/units",
+    "url": "https://eagleapi.herokuapp.com/api/v1/units",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -1997,7 +2057,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/units/{unit}" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/units/{unit}" \
 -H "Accept: application/json"
 ```
 
@@ -2005,7 +2065,7 @@ curl -X GET "http://localhost:8000/api/v1/units/{unit}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/units/{unit}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/units/{unit}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2020,7 +2080,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -2037,7 +2099,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/units/{unit}/edit" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/units/{unit}/edit" \
 -H "Accept: application/json"
 ```
 
@@ -2045,7 +2107,7 @@ curl -X GET "http://localhost:8000/api/v1/units/{unit}/edit" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/units/{unit}/edit",
+    "url": "https://eagleapi.herokuapp.com/api/v1/units/{unit}/edit",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2060,7 +2122,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -2077,7 +2141,7 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/units/{unit}" \
+curl -X PUT "https://eagleapi.herokuapp.com/api/v1/units/{unit}" \
 -H "Accept: application/json"
 ```
 
@@ -2085,7 +2149,7 @@ curl -X PUT "http://localhost:8000/api/v1/units/{unit}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/units/{unit}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/units/{unit}",
     "method": "PUT",
     "headers": {
         "accept": "application/json"
@@ -2112,7 +2176,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X DELETE "http://localhost:8000/api/v1/units/{unit}" \
+curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/units/{unit}" \
 -H "Accept: application/json"
 ```
 
@@ -2120,7 +2184,7 @@ curl -X DELETE "http://localhost:8000/api/v1/units/{unit}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/units/{unit}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/units/{unit}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -2149,7 +2213,7 @@ Attributes are: content(String), start_date(date), end_date(date)
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/visions" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/visions" \
 -H "Accept: application/json"
 ```
 
@@ -2157,7 +2221,7 @@ curl -X GET "http://localhost:8000/api/v1/visions" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/visions",
+    "url": "https://eagleapi.herokuapp.com/api/v1/visions",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2172,7 +2236,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -2189,7 +2255,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/visions/create" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/visions/create" \
 -H "Accept: application/json"
 ```
 
@@ -2197,7 +2263,7 @@ curl -X GET "http://localhost:8000/api/v1/visions/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/visions/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/visions/create",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2212,7 +2278,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
@@ -2229,7 +2297,7 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/visions" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/visions" \
 -H "Accept: application/json"
 ```
 
@@ -2237,7 +2305,7 @@ curl -X POST "http://localhost:8000/api/v1/visions" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/visions",
+    "url": "https://eagleapi.herokuapp.com/api/v1/visions",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -2262,7 +2330,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/visions/{vision}" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/visions/{vision}" \
 -H "Accept: application/json"
 ```
 
@@ -2270,7 +2338,7 @@ curl -X GET "http://localhost:8000/api/v1/visions/{vision}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/visions/{vision}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/visions/{vision}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2285,7 +2353,339 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Too Many Attempts.",
+    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+    "line": 124,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "line": 53,
+            "function": "buildException",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
+}
 ```
 
 ### HTTP Request
@@ -2302,7 +2702,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/visions/{vision}/edit" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/visions/{vision}/edit" \
 -H "Accept: application/json"
 ```
 
@@ -2310,7 +2710,7 @@ curl -X GET "http://localhost:8000/api/v1/visions/{vision}/edit" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/visions/{vision}/edit",
+    "url": "https://eagleapi.herokuapp.com/api/v1/visions/{vision}/edit",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2325,7 +2725,339 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Too Many Attempts.",
+    "exception": "Illuminate\\Http\\Exceptions\\ThrottleRequestsException",
+    "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+    "line": 124,
+    "trace": [
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "line": 53,
+            "function": "buildException",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 682,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 657,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 623,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 612,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 176,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 30,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 62,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 163,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 53,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 104,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 151,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 116,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 140,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\AbstractGenerator.php",
+            "line": 137,
+            "function": "callRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Generators\\LaravelGenerator.php",
+            "line": 80,
+            "function": "getRouteResponse",
+            "class": "Oxycoder\\ApiDoc\\Generators\\AbstractGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 272,
+            "function": "processRoute",
+            "class": "Oxycoder\\ApiDoc\\Generators\\LaravelGenerator",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\oxycoder\\laravel-apidoc-generator\\src\\Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation.php",
+            "line": 86,
+            "function": "processLaravelRoutes",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "function": "handle",
+            "class": "Oxycoder\\ApiDoc\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 32,
+            "function": "call_user_func_array"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 90,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 34,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 580,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 183,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 170,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 908,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 269,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\symfony\\console\\Application.php",
+            "line": 145,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 90,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 122,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "C:\\xampp\\php\\www\\eagleapi\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
+}
 ```
 
 ### HTTP Request
@@ -2342,7 +3074,7 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/visions/{vision}" \
+curl -X PUT "https://eagleapi.herokuapp.com/api/v1/visions/{vision}" \
 -H "Accept: application/json"
 ```
 
@@ -2350,7 +3082,7 @@ curl -X PUT "http://localhost:8000/api/v1/visions/{vision}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/visions/{vision}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/visions/{vision}",
     "method": "PUT",
     "headers": {
         "accept": "application/json"
@@ -2377,7 +3109,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X DELETE "http://localhost:8000/api/v1/visions/{vision}" \
+curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/visions/{vision}" \
 -H "Accept: application/json"
 ```
 
@@ -2385,7 +3117,7 @@ curl -X DELETE "http://localhost:8000/api/v1/visions/{vision}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/visions/{vision}",
+    "url": "https://eagleapi.herokuapp.com/api/v1/visions/{vision}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -2412,7 +3144,7 @@ FOR SUCCESSFUL REQUEST: Status code 200. Wrong password: Status code 401 (Unauth
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/user/login" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/login" \
 -H "Accept: application/json" \
     -d "email"="clarabelle94@example.net" \
     -d "password"="excepturi" \
@@ -2423,7 +3155,7 @@ curl -X POST "http://localhost:8000/api/v1/user/login" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/user/login",
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/login",
     "method": "POST",
     "data": {
         "email": "clarabelle94@example.net",
@@ -2439,6 +3171,11 @@ $.ajax(settings).done(function (response) {
 });
 ```
 
+> Example response:
+
+```json
+null
+```
 
 ### HTTP Request
 `POST api/v1/user/login`
@@ -2459,7 +3196,7 @@ If supervisor_id is not set, it uses the admin id (1) as the supervisor_id. This
 > Example request:
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/user/create" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/create" \
 -H "Accept: application/json"
 ```
 
@@ -2467,7 +3204,7 @@ curl -X POST "http://localhost:8000/api/v1/user/create" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/user/create",
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/create",
     "method": "POST",
     "headers": {
         "accept": "application/json"
@@ -2492,7 +3229,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost:8000/api/v1/user/details" \
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/user/details" \
 -H "Accept: application/json"
 ```
 
@@ -2500,7 +3237,7 @@ curl -X GET "http://localhost:8000/api/v1/user/details" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost:8000/api/v1/user/details",
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/details",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -2515,7 +3252,9 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-null
+{
+    "message": "Unauthenticated."
+}
 ```
 
 ### HTTP Request
