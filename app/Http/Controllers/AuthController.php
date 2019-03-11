@@ -141,6 +141,14 @@ class AuthController extends Controller
             return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
         }
     }
+
+    /**
+     * Sets User as HR
+     *
+     * @param Unit $unit
+     * @param User $user
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function set_hr(User $user)
     {
         if (auth()->user()->role->id == Constants::hr_role_id) {

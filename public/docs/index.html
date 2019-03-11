@@ -1030,12 +1030,23 @@ $.ajax(settings).done(function (response) {
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/objectives" \
--H "Accept: application/json"</code></pre>
+-H "Accept: application/json" \
+    -d "content"="nihil" \
+    -d "start_date"="1990-10-05" \
+    -d "end_date"="1990-10-05" \
+    -d "unit_id"="nihil" \
+</code></pre>
 <pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
     "url": "https://eagleapi.herokuapp.com/api/v1/objectives",
     "method": "POST",
+    "data": {
+        "content": "nihil",
+        "start_date": "1990-10-05",
+        "end_date": "1990-10-05",
+        "unit_id": "nihil"
+},
     "headers": {
         "accept": "application/json"
     }
@@ -1046,6 +1057,39 @@ $.ajax(settings).done(function (response) {
 });</code></pre>
 <h3>HTTP Request</h3>
 <p><code>POST api/v1/objectives</code></p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td>string</td>
+<td>required</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>date</td>
+<td>required</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>date</td>
+<td>required</td>
+</tr>
+<tr>
+<td>unit_id</td>
+<td>string</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
 <!-- END_c2370f8732acbfbb581ad054fa40cfcc -->
 <!-- START_3bcab4e6ad7059bbb8470e83195673a1 -->
 <h2>Display the specified resource.</h2>
@@ -1077,36 +1121,6 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/v1/objectives/{objective}</code></p>
 <p><code>HEAD api/v1/objectives/{objective}</code></p>
 <!-- END_3bcab4e6ad7059bbb8470e83195673a1 -->
-<!-- START_c20a75f96821a50df2eae3664d7e4bfb -->
-<h2>Show the form for editing the specified resource.</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}/edit" \
--H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre><code class="language-json">{
-    "message": "Unauthenticated."
-}</code></pre>
-<h3>HTTP Request</h3>
-<p><code>GET api/v1/objectives/{objective}/edit</code></p>
-<p><code>HEAD api/v1/objectives/{objective}/edit</code></p>
-<!-- END_c20a75f96821a50df2eae3664d7e4bfb -->
 <!-- START_26385a1b457b3ab87fee947be73b7e90 -->
 <h2>Update the specified resource in storage.</h2>
 <blockquote>
@@ -1131,29 +1145,6 @@ $.ajax(settings).done(function (response) {
 <p><code>PUT api/v1/objectives/{objective}</code></p>
 <p><code>PATCH api/v1/objectives/{objective}</code></p>
 <!-- END_26385a1b457b3ab87fee947be73b7e90 -->
-<!-- START_ce0f1ee0c3b5539103636670952e7a06 -->
-<h2>Remove the specified resource from storage.</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}" \
--H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-<h3>HTTP Request</h3>
-<p><code>DELETE api/v1/objectives/{objective}</code></p>
-<!-- END_ce0f1ee0c3b5539103636670952e7a06 -->
 <h1>Role</h1>
 <p>This is the Model for the Roles
 Attributes are: name(String), permissions(string)</p>

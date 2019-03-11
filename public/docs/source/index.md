@@ -1227,7 +1227,12 @@ $.ajax(settings).done(function (response) {
 
 ```bash
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/objectives" \
--H "Accept: application/json"
+-H "Accept: application/json" \
+    -d "content"="nihil" \
+    -d "start_date"="1990-10-05" \
+    -d "end_date"="1990-10-05" \
+    -d "unit_id"="nihil" \
+
 ```
 
 ```javascript
@@ -1236,6 +1241,12 @@ var settings = {
     "crossDomain": true,
     "url": "https://eagleapi.herokuapp.com/api/v1/objectives",
     "method": "POST",
+    "data": {
+        "content": "nihil",
+        "start_date": "1990-10-05",
+        "end_date": "1990-10-05",
+        "unit_id": "nihil"
+},
     "headers": {
         "accept": "application/json"
     }
@@ -1250,6 +1261,14 @@ $.ajax(settings).done(function (response) {
 ### HTTP Request
 `POST api/v1/objectives`
 
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    content | string |  required  | 
+    start_date | date |  required  | 
+    end_date | date |  required  | 
+    unit_id | string |  required  | 
 
 <!-- END_c2370f8732acbfbb581ad054fa40cfcc -->
 
@@ -1295,48 +1314,6 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_3bcab4e6ad7059bbb8470e83195673a1 -->
 
-<!-- START_c20a75f96821a50df2eae3664d7e4bfb -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/objectives/{objective}/edit`
-
-`HEAD api/v1/objectives/{objective}/edit`
-
-
-<!-- END_c20a75f96821a50df2eae3664d7e4bfb -->
-
 <!-- START_26385a1b457b3ab87fee947be73b7e90 -->
 ## Update the specified resource in storage.
 
@@ -1371,39 +1348,6 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_26385a1b457b3ab87fee947be73b7e90 -->
-
-<!-- START_ce0f1ee0c3b5539103636670952e7a06 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/objectives/{objective}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/objectives/{objective}`
-
-
-<!-- END_ce0f1ee0c3b5539103636670952e7a06 -->
 
 #Role
 
