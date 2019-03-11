@@ -6,6 +6,12 @@ use App\Constants;
 use App\User;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Auth
+ *
+ * This is the Model for the User (Employee)
+ * Attributes are: surname(String), firstname(string), email(string), phone(string),unit_id(integer),gender(string),role_id(integer),password and job_title(string)
+ */
 class AuthController extends Controller
 {
     /**
