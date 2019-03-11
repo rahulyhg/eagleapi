@@ -2324,7 +2324,7 @@ $.ajax(settings).done(function (response) {
 This is the Model for the Vision
 Attributes are: content(String), start_date(date), end_date(date)
 <!-- START_43759e6566bfca255aeed865e0b3421e -->
-## Display a listing of the resource.
+## Display a listing of the Vision.
 
 > Example request:
 
@@ -2365,48 +2365,6 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_43759e6566bfca255aeed865e0b3421e -->
 
-<!-- START_d7452eb572e361f2baf55ef6b7e8fe4d -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/visions/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/visions/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/visions/create`
-
-`HEAD api/v1/visions/create`
-
-
-<!-- END_d7452eb572e361f2baf55ef6b7e8fe4d -->
-
 <!-- START_47f3dd82ee868f3afd95759007ff9eda -->
 ## Store a newly created resource in storage.
 
@@ -2414,7 +2372,11 @@ $.ajax(settings).done(function (response) {
 
 ```bash
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/visions" \
--H "Accept: application/json"
+-H "Accept: application/json" \
+    -d "content"="in" \
+    -d "start_date"="1989-09-17" \
+    -d "end_date"="1989-09-17" \
+
 ```
 
 ```javascript
@@ -2423,6 +2385,11 @@ var settings = {
     "crossDomain": true,
     "url": "https://eagleapi.herokuapp.com/api/v1/visions",
     "method": "POST",
+    "data": {
+        "content": "in",
+        "start_date": "1989-09-17",
+        "end_date": "1989-09-17"
+},
     "headers": {
         "accept": "application/json"
     }
@@ -2437,6 +2404,13 @@ $.ajax(settings).done(function (response) {
 ### HTTP Request
 `POST api/v1/visions`
 
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    content | string |  required  | 
+    start_date | date |  required  | 
+    end_date | date |  required  | 
 
 <!-- END_47f3dd82ee868f3afd95759007ff9eda -->
 
@@ -2482,48 +2456,6 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_fc2de0a37bda72e72a112480778ff708 -->
 
-<!-- START_7383751939c2264f9f0d44454de31362 -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/visions/{vision}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/visions/{vision}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/visions/{vision}/edit`
-
-`HEAD api/v1/visions/{vision}/edit`
-
-
-<!-- END_7383751939c2264f9f0d44454de31362 -->
-
 <!-- START_9ab56e288b4a55df8fd828cad1816d8d -->
 ## Update the specified resource in storage.
 
@@ -2558,37 +2490,4 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_9ab56e288b4a55df8fd828cad1816d8d -->
-
-<!-- START_958a62fe99ca83e8e8a847e4435c6a62 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/visions/{vision}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/visions/{vision}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/visions/{vision}`
-
-
-<!-- END_958a62fe99ca83e8e8a847e4435c6a62 -->
 

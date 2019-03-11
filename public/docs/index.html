@@ -1825,7 +1825,7 @@ $.ajax(settings).done(function (response) {
 <p>This is the Model for the Vision
 Attributes are: content(String), start_date(date), end_date(date)</p>
 <!-- START_43759e6566bfca255aeed865e0b3421e -->
-<h2>Display a listing of the resource.</h2>
+<h2>Display a listing of the Vision.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
@@ -1854,48 +1854,27 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/v1/visions</code></p>
 <p><code>HEAD api/v1/visions</code></p>
 <!-- END_43759e6566bfca255aeed865e0b3421e -->
-<!-- START_d7452eb572e361f2baf55ef6b7e8fe4d -->
-<h2>Show the form for creating a new resource.</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET "https://eagleapi.herokuapp.com/api/v1/visions/create" \
--H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/visions/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre><code class="language-json">{
-    "message": "Unauthenticated."
-}</code></pre>
-<h3>HTTP Request</h3>
-<p><code>GET api/v1/visions/create</code></p>
-<p><code>HEAD api/v1/visions/create</code></p>
-<!-- END_d7452eb572e361f2baf55ef6b7e8fe4d -->
 <!-- START_47f3dd82ee868f3afd95759007ff9eda -->
 <h2>Store a newly created resource in storage.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/visions" \
--H "Accept: application/json"</code></pre>
+-H "Accept: application/json" \
+    -d "content"="in" \
+    -d "start_date"="1989-09-17" \
+    -d "end_date"="1989-09-17" \
+</code></pre>
 <pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
     "url": "https://eagleapi.herokuapp.com/api/v1/visions",
     "method": "POST",
+    "data": {
+        "content": "in",
+        "start_date": "1989-09-17",
+        "end_date": "1989-09-17"
+},
     "headers": {
         "accept": "application/json"
     }
@@ -1906,6 +1885,34 @@ $.ajax(settings).done(function (response) {
 });</code></pre>
 <h3>HTTP Request</h3>
 <p><code>POST api/v1/visions</code></p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td>string</td>
+<td>required</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>date</td>
+<td>required</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>date</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
 <!-- END_47f3dd82ee868f3afd95759007ff9eda -->
 <!-- START_fc2de0a37bda72e72a112480778ff708 -->
 <h2>Display the specified resource.</h2>
@@ -1937,36 +1944,6 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/v1/visions/{vision}</code></p>
 <p><code>HEAD api/v1/visions/{vision}</code></p>
 <!-- END_fc2de0a37bda72e72a112480778ff708 -->
-<!-- START_7383751939c2264f9f0d44454de31362 -->
-<h2>Show the form for editing the specified resource.</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET "https://eagleapi.herokuapp.com/api/v1/visions/{vision}/edit" \
--H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/visions/{vision}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre><code class="language-json">{
-    "message": "Unauthenticated."
-}</code></pre>
-<h3>HTTP Request</h3>
-<p><code>GET api/v1/visions/{vision}/edit</code></p>
-<p><code>HEAD api/v1/visions/{vision}/edit</code></p>
-<!-- END_7383751939c2264f9f0d44454de31362 -->
 <!-- START_9ab56e288b4a55df8fd828cad1816d8d -->
 <h2>Update the specified resource in storage.</h2>
 <blockquote>
@@ -1991,29 +1968,6 @@ $.ajax(settings).done(function (response) {
 <p><code>PUT api/v1/visions/{vision}</code></p>
 <p><code>PATCH api/v1/visions/{vision}</code></p>
 <!-- END_9ab56e288b4a55df8fd828cad1816d8d -->
-<!-- START_958a62fe99ca83e8e8a847e4435c6a62 -->
-<h2>Remove the specified resource from storage.</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/visions/{vision}" \
--H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/visions/{vision}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-<h3>HTTP Request</h3>
-<p><code>DELETE api/v1/visions/{vision}</code></p>
-<!-- END_958a62fe99ca83e8e8a847e4435c6a62 -->
       </div>
       <div class="dark-box">
                         <div class="lang-selector">
