@@ -18,8 +18,8 @@ class CreateIndGoalsTable extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->string('content');
-            $table->boolean('approved');
-            $table->boolean('status');
+            $table->boolean('approved')->default(false);
+            $table->boolean('status')->default(false);
             $table->unsignedBigInteger('employee_id');
             $table->foreign('employee_id')->references('id')->on('users');
             $table->timestamps();

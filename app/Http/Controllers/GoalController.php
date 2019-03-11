@@ -84,14 +84,14 @@ class GoalController extends Controller
         if (!$goal) {
             return response()->json([
                 'success' => false,
-                'message' => 'Product with id ' . $goal->id . ' not found'
+                'message' => 'Goal with id ' . $goal->id . ' not found'
             ], 400);
         }
 
         return response()->json([
             'success' => true,
             'data' => $goal
-        ], 400);
+        ], 200);
     }
 
     /**
@@ -106,7 +106,7 @@ class GoalController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified Goal in storage. Access Level (Admin)
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Goal  $goal
@@ -114,7 +114,7 @@ class GoalController extends Controller
      */
     public function update(Request $request, Goal $goal)
     {
-        if (auth()->user()->role->id == Constants::admin_role_id || auth()->user()->role->id == Constants::hr_role_id) {
+        if (auth()->user()->role->id == Constants::admin_role_id) {
             if (!$goal) {
                 return response()->json([
                     'success' => false,
@@ -126,7 +126,7 @@ class GoalController extends Controller
                 return response()->json([
                     'success' => true,
                     'message' => 'Goal details updated'
-                ]);
+                ],200);
             else
                 return response()->json([
                     'success' => false,

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Constants;
+use App\Goal;
 use App\IndGoal;
 use Illuminate\Http\Request;
 
@@ -14,18 +16,21 @@ use Illuminate\Http\Request;
 class IndGoalController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the Individual Goals.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return response()->json([
+            'success' => true,
+            'data' => auth()->user()->goals
+        ],200);
     }
 
     /**
      * Show the form for creating a new resource.
-     *
+     * @hideFromAPIDocumentation
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -41,7 +46,30 @@ class IndGoalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+            $validatedData = $request->validate([
+                'content' => 'required',
+                'start_date' => 'required|date',
+                'end_date' => 'required|date'
+            ]);
+
+            $goal = new IndGoal();
+            $goal->content = $request->get('content');
+            $goal->start_date = $request->get('start_date');
+            $goal->end_date = $request->get('end_date');
+            $goal->employee_id = auth()->user()->id;
+            $goal->approved = false;
+            $goal->status = false;
+
+            if ($goal->save())
+                return response()->json([
+                    'success' => true,
+                    'data' => $goal
+                ]);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Individual Goal could not be added'
+                ], 500);
     }
 
     /**
@@ -52,12 +80,22 @@ class IndGoalController extends Controller
      */
     public function show(IndGoal $indGoal)
     {
-        //
+        if (!$indGoal) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Individual Goal with id ' . $indGoal->id . ' not found'
+            ], 400);
+        }
+
+        return response()->json([
+            'success' => true,
+            'data' => IndGoal::with(['tasks','employee'])->find($indGoal->id)
+        ], 200);
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
+     *@hideFromAPIDocumentation
      * @param  \App\IndGoal  $indGoal
      * @return \Illuminate\Http\Response
      */
@@ -75,12 +113,32 @@ class IndGoalController extends Controller
      */
     public function update(Request $request, IndGoal $indGoal)
     {
-        //
+        if (auth()->user()->role->id == Constants::admin_role_id || auth()->user()->role->id == Constants::hr_role_id) {
+            if (!$indGoal) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Individual Goal with id ' . $indGoal->id . ' not found'
+                ], 400);
+            }
+            $updated = $indGoal->fill($request->all())->save();
+            if ($updated)
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Individual Goal details updated'
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Individual Goal could not be updated'
+                ], 500);
+        }else {
+            return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
-     *
+     *@hideFromAPIDocumentation
      * @param  \App\IndGoal  $indGoal
      * @return \Illuminate\Http\Response
      */

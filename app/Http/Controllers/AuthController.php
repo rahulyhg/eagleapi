@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Constants;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * @resource Auth
