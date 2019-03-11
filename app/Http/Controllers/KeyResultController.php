@@ -5,6 +5,13 @@ namespace App\Http\Controllers;
 use App\KeyResult;
 use Illuminate\Http\Request;
 
+/**
+ * @resource KeyResult
+ *
+ * This is the Model for the Unit KeyResults
+ * Attributes are: content(String), start_date(date), end_date(date), objective_id(integer)
+ */
+
 class KeyResultController extends Controller
 {
     /**

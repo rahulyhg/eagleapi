@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Unit;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Unit
+ *
+ * This is the Model for the Units
+ * Attributes are: name(String), unit_lead(integer) a foreign key for employee (User)
+ */
 class UnitController extends Controller
 {
     /**

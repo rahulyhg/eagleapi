@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Role;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Role
+ *
+ * This is the Model for the Roles
+ * Attributes are: name(String), permissions(string)
+ */
 class RoleController extends Controller
 {
     /**

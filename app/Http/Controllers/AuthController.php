@@ -57,12 +57,21 @@ class AuthController extends Controller
 
     /**
      * Handles Login Request
-     *
+     * FOR SUCCESSFUL REQUEST: Status code 200. Wrong password: Status code 401 (Unauthorized)
+     * @response {
+     * data: [
+     * "success" => true, "token"=> "User token"
+     * ],
+     *}
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
     public function login(Request $request)
     {
+        $validatedData = $request->validate([
+            'email' => 'email|required',
+            'password' => 'required|string'
+        ]);
         $credentials = [
             'email' => $request->email,
             'password' => $request->password

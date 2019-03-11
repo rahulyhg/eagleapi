@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Vision;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Vision
+ *
+ * This is the Model for the Vision
+ * Attributes are: content(String), start_date(date), end_date(date)
+ */
 class VisionController extends Controller
 {
     /**

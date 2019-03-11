@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Task;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Task
+ *
+ * This is the Model for the Tasks
+ * Attributes are: content(String), start_date(date), end_date(date), employee_id, goal_id, ipm_id, rating(integer), status (boolean), approved (boolean)
+ */
 class TaskController extends Controller
 {
     /**

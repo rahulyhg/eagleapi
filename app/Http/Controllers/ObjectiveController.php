@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Objective;
 use Illuminate\Http\Request;
 
+/**
+ * @resource Objective
+ *
+ * This is the Model for the Unit Objectives
+ * Attributes are: content(String), start_date(date), end_date(date), unit_id(integer)
+ */
 class ObjectiveController extends Controller
 {
     /**
