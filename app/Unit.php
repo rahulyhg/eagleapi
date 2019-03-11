@@ -11,6 +11,6 @@ class Unit extends Model
         return $this->hasMany(User::class);
     }
     public function lead(){
-        return $this->belongsTo(User::class,'employee_id');
+        return $this->belongsTo(User::class,'unit_lead');
     }
 }

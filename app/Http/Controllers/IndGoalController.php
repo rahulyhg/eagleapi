@@ -137,6 +137,95 @@ class IndGoalController extends Controller
     }
 
     /**
+     * Approve an individual Goal by HR or Admin. Send ID
+     *
+     * @param $id
+     * @return \Illuminate\Http\Response
+     */
+    public function approve($id){
+        $indGoal = IndGoal::find($id);
+        if (auth()->user()->role->id == Constants::admin_role_id || auth()->user()->role->id == Constants::hr_role_id){
+            if (!$indGoal) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Individual Goal with id ' . $indGoal->id . ' not found'
+                ], 400);
+            }
+            $indGoal->approved = true;
+            $updated = $indGoal->save();
+            if ($updated)
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Individual Goal approved'
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Individual Goal could not be approved'
+                ], 500);
+        }else {
+            return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
+        }
+    }
+    /**
+     * Disapprove an individual Goal by HR or Admin. Send ID
+     *
+     * @param $id
+     * @return \Illuminate\Http\Response
+     */
+    public function disapprove($id){
+        $indGoal = IndGoal::find($id);
+        if (auth()->user()->role->id == Constants::admin_role_id || auth()->user()->role->id == Constants::hr_role_id){
+            if (!$indGoal) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Individual Goal with id ' . $indGoal->id . ' not found'
+                ], 400);
+            }
+            $indGoal->approved = false;
+            $updated = $indGoal->save();
+            if ($updated)
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Individual Goal disapproved'
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Individual Goal could not be disapproved'
+                ], 500);
+        }else {
+            return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
+        }
+    }
+    /**
+     * Complete an individual Goal by User
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function complete(){
+        $indGoal = IndGoal::find(auth()->user()->id);
+            if (!$indGoal) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Individual Goal with id ' . $indGoal->id . ' not found'
+                ], 400);
+            }
+            $indGoal->status = true;
+            $updated = $indGoal->save();
+            if ($updated)
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Individual Goal Completed'
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Individual Goal could not be completed'
+                ], 500);
+    }
+
+    /**
      * Remove the specified resource from storage.
      *@hideFromAPIDocumentation
      * @param  \App\IndGoal  $indGoal

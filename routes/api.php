@@ -23,6 +23,9 @@ Route::middleware('auth:api')->prefix('v1')->group(function () {
     Route::patch('user/admin_update/{id}', 'UserController@adminUpdate');
     Route::resource('goals', 'GoalController');
     Route::resource('ind_goals', 'IndGoalController');
+    Route::patch('ind_goals/approve/{id}','IndGoalController@approve');
+    Route::patch('ind_goals/disapprove/{id}','IndGoalController@disapprove');
+    Route::patch('ind_goals/complete/{id}','IndGoalController@complete');
     Route::resource('ipms', 'IPMController');
     Route::resource('keyresults', 'KeyResultController');
     Route::resource('objectives', 'ObjectiveController');
