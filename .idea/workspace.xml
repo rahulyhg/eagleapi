@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="01bb4378-c1c7-4690-b790-7fd0df36c2ba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/IndGoalController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/IndGoalController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UnitController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UnitController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Unit.php" afterPath="$PROJECT_DIR$/app/Unit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,13 +53,13 @@
       <file leaf-file-name="UnitController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UnitController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+            <state relative-caret-position="514">
+              <caret line="130" column="12" lean-forward="false" selection-start-line="130" selection-start-column="12" selection-end-line="130" selection-end-column="12" />
               <folding>
                 <element signature="e#40#58#0#PHP" expanded="true" />
                 <element signature="e#725#772#0#PHP" expanded="false" />
                 <element signature="e#2548#2603#0#PHP" expanded="false" />
-                <element signature="e#3745#3912#0#PHP" expanded="false" />
+                <element signature="e#3758#3925#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -363,12 +360,12 @@
       <workItem from="1551864972231" duration="16141000" />
       <workItem from="1552030739901" duration="15449000" />
       <workItem from="1552208630032" duration="670000" />
-      <workItem from="1552292535043" duration="20721000" />
+      <workItem from="1552292535043" duration="20785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52981000" />
+    <option name="totallyTimeSpent" value="53045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -803,13 +800,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UnitController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="127" column="38" lean-forward="false" selection-start-line="127" selection-start-column="38" selection-end-line="127" selection-end-column="38" />
+        <state relative-caret-position="514">
+          <caret line="130" column="12" lean-forward="false" selection-start-line="130" selection-start-column="12" selection-end-line="130" selection-end-column="12" />
           <folding>
             <element signature="e#40#58#0#PHP" expanded="true" />
             <element signature="e#725#772#0#PHP" expanded="false" />
             <element signature="e#2548#2603#0#PHP" expanded="false" />
-            <element signature="e#3745#3912#0#PHP" expanded="false" />
+            <element signature="e#3758#3925#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
