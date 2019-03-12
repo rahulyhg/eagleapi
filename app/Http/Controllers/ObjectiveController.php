@@ -53,7 +53,7 @@ class ObjectiveController extends Controller
             'unit_id' => 'required',
         ]);
         $unit = Unit::find($request->get('unit_id'));
-        if (auth()->user()->role->id == Constants::admin_role_id ||
+        if (auth()->user()->role->id == Constants::admin_role_id || auth()->user()->role->id == Constants::hr_role_id ||
             (auth()->user()->role->id == Constants::unit_lead_role_id && auth()->user()->id == $unit->unit_lead)){
             $objective = new Objective();
             $objective->content = $request->get('content');
@@ -116,7 +116,7 @@ class ObjectiveController extends Controller
      */
     public function update(Request $request, Objective $objective)
     {
-        if (auth()->user()->role->id == Constants::admin_role_id ||
+        if (auth()->user()->role->id == Constants::admin_role_id || auth()->user()->role->id == Constants::hr_role_id ||
             (auth()->user()->role->id == Constants::unit_lead_role_id && auth()->user()->id == $objective->unit->unit_lead)){
             if (!$objective) {
                 return response()->json([

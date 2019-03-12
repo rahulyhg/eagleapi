@@ -104,13 +104,13 @@ class AuthController extends Controller
     }
 
     /**
-     * Sets User as Unit Lead
+     * Sets User as Unit Lead. Send User ID and Unit ID
      *
      * @param Unit $unit
      * @param User $user
      * @return \Illuminate\Http\JsonResponse
      */
-    public function set_unit_lead(Unit $unit,User $user)
+    public function set_unit_lead(User $user,Unit $unit)
     {
         if (auth()->user()->role->id == Constants::admin_role_id) {
             if (!$unit) {
@@ -122,12 +122,12 @@ class AuthController extends Controller
             if (!$user) {
                 return response()->json([
                     'success' => false,
-                    'message' => 'Unit with id ' . $user->id . ' not found'
+                    'message' => 'User with id ' . $user->id . ' not found'
                 ], 400);
             }
-            $updated_user = $user->role_id = Constants::unit_lead_role_id;
-            $updated_unit = $unit->unit_lead = $user->id;
-            if ($updated_user && $updated_unit)
+            $user->role_id = Constants::unit_lead_role_id;
+            $unit->unit_lead = $user->id;
+            if ($user->save() && $unit->save())
                 return response()->json([
                     'success' => true,
                     'message' => 'User set as Unit Lead for '. $unit->name
@@ -141,9 +141,47 @@ class AuthController extends Controller
             return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
         }
     }
+    /**
+     * Demotes Unit Lead to ordinary employee. Send User ID and Unit ID
+     *
+     * @param Unit $unit
+     * @param User $user
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function demote_unit_lead(User $user,Unit $unit)
+    {
+        if (auth()->user()->role->id == Constants::admin_role_id) {
+            if (!$unit) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Unit with id ' . $unit->id . ' not found'
+                ], 400);
+            }
+            if (!$user) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'User with id ' . $user->id . ' not found'
+                ], 400);
+            }
+            $user->role_id = Constants::employee_role_id;
+            $unit->unit_lead = auth()->user()->id;
+            if ($user->save() && $unit->save())
+                return response()->json([
+                    'success' => true,
+                    'message' => 'User demoted as Unit Lead for '. $unit->name
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'User could not be demoted'
+                ], 500);
+        }else {
+            return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
+        }
+    }
 
     /**
-     * Sets User as HR
+     * Sets User as HR. Send ID
      *
      * @param Unit $unit
      * @param User $user
@@ -151,15 +189,15 @@ class AuthController extends Controller
      */
     public function set_hr(User $user)
     {
-        if (auth()->user()->role->id == Constants::hr_role_id) {
+        if (auth()->user()->role->id == Constants::admin_role_id) {
             if (!$user) {
                 return response()->json([
                     'success' => false,
                     'message' => 'Unit with id ' . $user->id . ' not found'
                 ], 400);
             }
-            $updated_user = $user->role_id = Constants::unit_lead_role_id;
-            if ($updated_user)
+            $user->role_id = Constants::hr_role_id;
+            if ($user->save())
                 return response()->json([
                     'success' => true,
                     'message' => 'User set as HR'
@@ -168,6 +206,37 @@ class AuthController extends Controller
                 return response()->json([
                     'success' => false,
                     'message' => 'User could not be set as HR'
+                ], 500);
+        }else {
+            return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
+        }
+    }
+    /**
+     * Demotes User as HR. Send ID
+     *
+     * @param Unit $unit
+     * @param User $user
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function demote_hr(User $user)
+    {
+        if (auth()->user()->role->id == Constants::admin_role_id) {
+            if (!$user) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Unit with id ' . $user->id . ' not found'
+                ], 400);
+            }
+            $user->role_id = Constants::employee_role_id;
+            if ($user->save())
+                return response()->json([
+                    'success' => true,
+                    'message' => 'User demoted as HR'
+                ],200);
+            else
+                return response()->json([
+                    'success' => false,
+                    'message' => 'User could not be demoted'
                 ], 500);
         }else {
             return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);

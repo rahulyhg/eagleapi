@@ -13,6 +13,6 @@ class IPM extends Model
     }
 
     public function tasks(){
-        return $this->hasMany(Task::class,'goal_id');
+        return $this->hasMany(Task::class);
     }
 }
