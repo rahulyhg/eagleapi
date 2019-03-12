@@ -185,6 +185,138 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_8e5610ed60ab9da974a82ef653652d7e -->
 
+<!-- START_5d224eba34456e61d552db4ec3bbbe6f -->
+## Sets User as Unit Lead. Send User ID and Unit ID
+
+> Example request:
+
+```bash
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/unit_lead/{user}/{unit}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/unit_lead/{user}/{unit}",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/v1/user/unit_lead/{user}/{unit}`
+
+
+<!-- END_5d224eba34456e61d552db4ec3bbbe6f -->
+
+<!-- START_a94669f933d482ed085d37f238828277 -->
+## Demotes Unit Lead to ordinary employee. Send User ID and Unit ID
+
+> Example request:
+
+```bash
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/demote_unit_lead/{user}/{unit}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/demote_unit_lead/{user}/{unit}",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/v1/user/demote_unit_lead/{user}/{unit}`
+
+
+<!-- END_a94669f933d482ed085d37f238828277 -->
+
+<!-- START_eb4b419c8576f560a5570534f008fbc5 -->
+## Sets User as HR. Send ID
+
+> Example request:
+
+```bash
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/hr/{user}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/hr/{user}",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/v1/user/hr/{user}`
+
+
+<!-- END_eb4b419c8576f560a5570534f008fbc5 -->
+
+<!-- START_d98edd81d645f88150c80689c84a84c8 -->
+## Demotes User as HR. Send ID
+
+> Example request:
+
+```bash
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/user/demote_hr/{user}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/user/demote_hr/{user}",
+    "method": "POST",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/v1/user/demote_hr/{user}`
+
+
+<!-- END_d98edd81d645f88150c80689c84a84c8 -->
+
 #Goal
 
 This is the Model for the overall Company goals
@@ -403,48 +535,6 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_2a01aac9c21f89fdaf3477fce44273eb -->
 
-<!-- START_6be1659c345aaf3209a8588474f5c047 -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/ipms/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/ipms/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/ipms/create`
-
-`HEAD api/v1/ipms/create`
-
-
-<!-- END_6be1659c345aaf3209a8588474f5c047 -->
-
 <!-- START_e59530849ef2b3bb4214479948b43529 -->
 ## Store a newly created resource in storage.
 
@@ -452,7 +542,10 @@ $.ajax(settings).done(function (response) {
 
 ```bash
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/ipms" \
--H "Accept: application/json"
+-H "Accept: application/json" \
+    -d "start_date"="1982-12-18" \
+    -d "end_date"="1982-12-18" \
+
 ```
 
 ```javascript
@@ -461,6 +554,10 @@ var settings = {
     "crossDomain": true,
     "url": "https://eagleapi.herokuapp.com/api/v1/ipms",
     "method": "POST",
+    "data": {
+        "start_date": "1982-12-18",
+        "end_date": "1982-12-18"
+},
     "headers": {
         "accept": "application/json"
     }
@@ -475,6 +572,12 @@ $.ajax(settings).done(function (response) {
 ### HTTP Request
 `POST api/v1/ipms`
 
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    start_date | date |  required  | 
+    end_date | date |  required  | 
 
 <!-- END_e59530849ef2b3bb4214479948b43529 -->
 
@@ -519,116 +622,6 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_740e99e2c0880fdccea718d3b49dc814 -->
-
-<!-- START_1b1e847cd85f8cc53089358401a9317f -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/ipms/{ipm}/edit`
-
-`HEAD api/v1/ipms/{ipm}/edit`
-
-
-<!-- END_1b1e847cd85f8cc53089358401a9317f -->
-
-<!-- START_e6c5b679a772784ae77167b255a85071 -->
-## Update the specified resource in storage.
-
-> Example request:
-
-```bash
-curl -X PUT "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}",
-    "method": "PUT",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`PUT api/v1/ipms/{ipm}`
-
-`PATCH api/v1/ipms/{ipm}`
-
-
-<!-- END_e6c5b679a772784ae77167b255a85071 -->
-
-<!-- START_f4d145e096dabdba40561965d085e456 -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/ipms/{ipm}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/ipms/{ipm}`
-
-
-<!-- END_f4d145e096dabdba40561965d085e456 -->
 
 #IndGoal
 
@@ -685,8 +678,8 @@ $.ajax(settings).done(function (response) {
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/ind_goals" \
 -H "Accept: application/json" \
     -d "content"="voluptas" \
-    -d "start_date"="2007-08-07" \
-    -d "end_date"="2007-08-07" \
+    -d "start_date"="2007-08-08" \
+    -d "end_date"="2007-08-08" \
 
 ```
 
@@ -698,8 +691,8 @@ var settings = {
     "method": "POST",
     "data": {
         "content": "voluptas",
-        "start_date": "2007-08-07",
-        "end_date": "2007-08-07"
+        "start_date": "2007-08-08",
+        "end_date": "2007-08-08"
 },
     "headers": {
         "accept": "application/json"
@@ -947,48 +940,6 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_8ba22f9759663ec985944eb83d7b308b -->
 
-<!-- START_2e28ad20071280932a8ed0f9be003fbf -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/keyresults/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/keyresults/create`
-
-`HEAD api/v1/keyresults/create`
-
-
-<!-- END_2e28ad20071280932a8ed0f9be003fbf -->
-
 <!-- START_95830bab3fdc8c347a13038c5bb7b5fa -->
 ## Store a newly created resource in storage.
 
@@ -996,7 +947,12 @@ $.ajax(settings).done(function (response) {
 
 ```bash
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/keyresults" \
--H "Accept: application/json"
+-H "Accept: application/json" \
+    -d "content"="consequatur" \
+    -d "start_date"="2009-11-13" \
+    -d "end_date"="2009-11-13" \
+    -d "objective_id"="consequatur" \
+
 ```
 
 ```javascript
@@ -1005,6 +961,12 @@ var settings = {
     "crossDomain": true,
     "url": "https://eagleapi.herokuapp.com/api/v1/keyresults",
     "method": "POST",
+    "data": {
+        "content": "consequatur",
+        "start_date": "2009-11-13",
+        "end_date": "2009-11-13",
+        "objective_id": "consequatur"
+},
     "headers": {
         "accept": "application/json"
     }
@@ -1019,109 +981,38 @@ $.ajax(settings).done(function (response) {
 ### HTTP Request
 `POST api/v1/keyresults`
 
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    content | string |  required  | 
+    start_date | date |  required  | 
+    end_date | date |  required  | 
+    objective_id | string |  required  | 
 
 <!-- END_95830bab3fdc8c347a13038c5bb7b5fa -->
 
-<!-- START_3383c22e42170d757347cd9eda9129b3 -->
-## Display the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/keyresults/{keyresult}`
-
-`HEAD api/v1/keyresults/{keyresult}`
-
-
-<!-- END_3383c22e42170d757347cd9eda9129b3 -->
-
-<!-- START_dbf0d34259f20021403fb8fdd6a496c9 -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/keyresults/{keyresult}/edit`
-
-`HEAD api/v1/keyresults/{keyresult}/edit`
-
-
-<!-- END_dbf0d34259f20021403fb8fdd6a496c9 -->
-
-<!-- START_71d4fecab3b888cbb1b177e438b60652 -->
+<!-- START_31c40d2d293fe06c2670f8dc7528c393 -->
 ## Update the specified resource in storage.
 
 > Example request:
 
 ```bash
-curl -X PUT "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}" \
--H "Accept: application/json"
+curl -X PATCH "https://eagleapi.herokuapp.com/api/v1/keyresults/{id}" \
+-H "Accept: application/json" \
+    -d "objective_id"="sequi" \
+
 ```
 
 ```javascript
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}",
-    "method": "PUT",
+    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/{id}",
+    "method": "PATCH",
+    "data": {
+        "objective_id": "sequi"
+},
     "headers": {
         "accept": "application/json"
     }
@@ -1134,45 +1025,15 @@ $.ajax(settings).done(function (response) {
 
 
 ### HTTP Request
-`PUT api/v1/keyresults/{keyresult}`
+`PATCH api/v1/keyresults/{id}`
 
-`PATCH api/v1/keyresults/{keyresult}`
+#### Parameters
 
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    objective_id | string |  required  | 
 
-<!-- END_71d4fecab3b888cbb1b177e438b60652 -->
-
-<!-- START_0e342ece15b353f7a55d5ace7cd209ef -->
-## Remove the specified resource from storage.
-
-> Example request:
-
-```bash
-curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/keyresults/{keyresult}",
-    "method": "DELETE",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`DELETE api/v1/keyresults/{keyresult}`
-
-
-<!-- END_0e342ece15b353f7a55d5ace7cd209ef -->
+<!-- END_31c40d2d293fe06c2670f8dc7528c393 -->
 
 #Objective
 
