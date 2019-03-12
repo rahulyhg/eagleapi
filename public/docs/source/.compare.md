@@ -1529,56 +1529,19 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_8515037be07bcb443a14691ac62822fe -->
 
-<!-- START_98a574bde7ccec933b33435531bfdfc2 -->
-## Show the form for creating a new resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/tasks/create" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/tasks/create`
-
-`HEAD api/v1/tasks/create`
-
-
-<!-- END_98a574bde7ccec933b33435531bfdfc2 -->
-
 <!-- START_930d0ef44833bc7192b1e31cbd94fd87 -->
-## Store a newly created resource in storage.
+## Store a newly created Task in storage.
 
 > Example request:
 
 ```bash
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/tasks" \
--H "Accept: application/json"
+-H "Accept: application/json" \
+    -d "content"="velit" \
+    -d "hours"="velit" \
+    -d "goal_id"="7" \
+    -d "ipm_id"="7" \
+
 ```
 
 ```javascript
@@ -1587,6 +1550,12 @@ var settings = {
     "crossDomain": true,
     "url": "https://eagleapi.herokuapp.com/api/v1/tasks",
     "method": "POST",
+    "data": {
+        "content": "velit",
+        "hours": "velit",
+        "goal_id": 7,
+        "ipm_id": 7
+},
     "headers": {
         "accept": "application/json"
     }
@@ -1601,6 +1570,14 @@ $.ajax(settings).done(function (response) {
 ### HTTP Request
 `POST api/v1/tasks`
 
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    content | string |  required  | 
+    hours | string |  required  | 
+    goal_id | integer |  required  | 
+    ipm_id | integer |  required  | 
 
 <!-- END_930d0ef44833bc7192b1e31cbd94fd87 -->
 
@@ -1646,50 +1623,8 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_6c2c8e52cea1c493c00f7834c176ef86 -->
 
-<!-- START_8897abef31fa8453082cc742175807fd -->
-## Show the form for editing the specified resource.
-
-> Example request:
-
-```bash
-curl -X GET "https://eagleapi.herokuapp.com/api/v1/tasks/{task}/edit" \
--H "Accept: application/json"
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/{task}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-> Example response:
-
-```json
-{
-    "message": "Unauthenticated."
-}
-```
-
-### HTTP Request
-`GET api/v1/tasks/{task}/edit`
-
-`HEAD api/v1/tasks/{task}/edit`
-
-
-<!-- END_8897abef31fa8453082cc742175807fd -->
-
 <!-- START_cc8eda185e9e68067a63ed146b3c1ec7 -->
-## Update the specified resource in storage.
+## Update the Task resource in storage. Access:Employee
 
 > Example request:
 
@@ -1723,13 +1658,13 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_cc8eda185e9e68067a63ed146b3c1ec7 -->
 
-<!-- START_0aea2007ba2b6701a1fd0be8aa69ef74 -->
-## Remove the specified resource from storage.
+<!-- START_bd87e802332037176b331893c920e6f8 -->
+## Approve a Task. Access:Supervisor, HR or Admin
 
 > Example request:
 
 ```bash
-curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/tasks/{task}" \
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/tasks/approve/{task}" \
 -H "Accept: application/json"
 ```
 
@@ -1737,8 +1672,8 @@ curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/tasks/{task}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/{task}",
-    "method": "DELETE",
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/approve/{task}",
+    "method": "POST",
     "headers": {
         "accept": "application/json"
     }
@@ -1751,10 +1686,53 @@ $.ajax(settings).done(function (response) {
 
 
 ### HTTP Request
-`DELETE api/v1/tasks/{task}`
+`POST api/v1/tasks/approve/{task}`
 
 
-<!-- END_0aea2007ba2b6701a1fd0be8aa69ef74 -->
+<!-- END_bd87e802332037176b331893c920e6f8 -->
+
+<!-- START_7460b0b14aa28cd768debceb46c97fa3 -->
+## Complete a Task. Access:Employee. Send rating.
+
+> Example request:
+
+```bash
+curl -X POST "https://eagleapi.herokuapp.com/api/v1/tasks/complete/{task}" \
+-H "Accept: application/json" \
+    -d "rating"="16" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/complete/{task}",
+    "method": "POST",
+    "data": {
+        "rating": 16
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/v1/tasks/complete/{task}`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    rating | integer |  required  | 
+
+<!-- END_7460b0b14aa28cd768debceb46c97fa3 -->
 
 #Unit
 

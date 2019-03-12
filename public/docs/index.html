@@ -1339,48 +1339,29 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/v1/tasks</code></p>
 <p><code>HEAD api/v1/tasks</code></p>
 <!-- END_8515037be07bcb443a14691ac62822fe -->
-<!-- START_98a574bde7ccec933b33435531bfdfc2 -->
-<h2>Show the form for creating a new resource.</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET "https://eagleapi.herokuapp.com/api/v1/tasks/create" \
--H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/create",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre><code class="language-json">{
-    "message": "Unauthenticated."
-}</code></pre>
-<h3>HTTP Request</h3>
-<p><code>GET api/v1/tasks/create</code></p>
-<p><code>HEAD api/v1/tasks/create</code></p>
-<!-- END_98a574bde7ccec933b33435531bfdfc2 -->
 <!-- START_930d0ef44833bc7192b1e31cbd94fd87 -->
-<h2>Store a newly created resource in storage.</h2>
+<h2>Store a newly created Task in storage.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/tasks" \
--H "Accept: application/json"</code></pre>
+-H "Accept: application/json" \
+    -d "content"="velit" \
+    -d "hours"="velit" \
+    -d "goal_id"="7" \
+    -d "ipm_id"="7" \
+</code></pre>
 <pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
     "url": "https://eagleapi.herokuapp.com/api/v1/tasks",
     "method": "POST",
+    "data": {
+        "content": "velit",
+        "hours": "velit",
+        "goal_id": 7,
+        "ipm_id": 7
+},
     "headers": {
         "accept": "application/json"
     }
@@ -1391,6 +1372,39 @@ $.ajax(settings).done(function (response) {
 });</code></pre>
 <h3>HTTP Request</h3>
 <p><code>POST api/v1/tasks</code></p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td>string</td>
+<td>required</td>
+</tr>
+<tr>
+<td>hours</td>
+<td>string</td>
+<td>required</td>
+</tr>
+<tr>
+<td>goal_id</td>
+<td>integer</td>
+<td>required</td>
+</tr>
+<tr>
+<td>ipm_id</td>
+<td>integer</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
 <!-- END_930d0ef44833bc7192b1e31cbd94fd87 -->
 <!-- START_6c2c8e52cea1c493c00f7834c176ef86 -->
 <h2>Display the specified resource.</h2>
@@ -1422,38 +1436,8 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/v1/tasks/{task}</code></p>
 <p><code>HEAD api/v1/tasks/{task}</code></p>
 <!-- END_6c2c8e52cea1c493c00f7834c176ef86 -->
-<!-- START_8897abef31fa8453082cc742175807fd -->
-<h2>Show the form for editing the specified resource.</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET "https://eagleapi.herokuapp.com/api/v1/tasks/{task}/edit" \
--H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/{task}/edit",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-<blockquote>
-<p>Example response:</p>
-</blockquote>
-<pre><code class="language-json">{
-    "message": "Unauthenticated."
-}</code></pre>
-<h3>HTTP Request</h3>
-<p><code>GET api/v1/tasks/{task}/edit</code></p>
-<p><code>HEAD api/v1/tasks/{task}/edit</code></p>
-<!-- END_8897abef31fa8453082cc742175807fd -->
 <!-- START_cc8eda185e9e68067a63ed146b3c1ec7 -->
-<h2>Update the specified resource in storage.</h2>
+<h2>Update the Task resource in storage. Access:Employee</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
@@ -1476,18 +1460,18 @@ $.ajax(settings).done(function (response) {
 <p><code>PUT api/v1/tasks/{task}</code></p>
 <p><code>PATCH api/v1/tasks/{task}</code></p>
 <!-- END_cc8eda185e9e68067a63ed146b3c1ec7 -->
-<!-- START_0aea2007ba2b6701a1fd0be8aa69ef74 -->
-<h2>Remove the specified resource from storage.</h2>
+<!-- START_bd87e802332037176b331893c920e6f8 -->
+<h2>Approve a Task. Access:Supervisor, HR or Admin</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
-<pre><code class="language-bash">curl -X DELETE "https://eagleapi.herokuapp.com/api/v1/tasks/{task}" \
+<pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/tasks/approve/{task}" \
 -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/{task}",
-    "method": "DELETE",
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/approve/{task}",
+    "method": "POST",
     "headers": {
         "accept": "application/json"
     }
@@ -1497,8 +1481,54 @@ $.ajax(settings).done(function (response) {
     console.log(response);
 });</code></pre>
 <h3>HTTP Request</h3>
-<p><code>DELETE api/v1/tasks/{task}</code></p>
-<!-- END_0aea2007ba2b6701a1fd0be8aa69ef74 -->
+<p><code>POST api/v1/tasks/approve/{task}</code></p>
+<!-- END_bd87e802332037176b331893c920e6f8 -->
+<!-- START_7460b0b14aa28cd768debceb46c97fa3 -->
+<h2>Complete a Task. Access:Employee. Send rating.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/tasks/complete/{task}" \
+-H "Accept: application/json" \
+    -d "rating"="16" \
+</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/tasks/complete/{task}",
+    "method": "POST",
+    "data": {
+        "rating": 16
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/v1/tasks/complete/{task}</code></p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rating</td>
+<td>integer</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_7460b0b14aa28cd768debceb46c97fa3 -->
 <h1>Unit</h1>
 <p>This is the Model for the Units
 Attributes are: name(String), unit_lead(integer) a foreign key for employee (User)</p>
