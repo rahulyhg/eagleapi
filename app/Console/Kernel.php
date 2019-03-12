@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
          $schedule->command('command:ipm')
-             ->weeklyOn(2, '18:10');;
+             ->weeklyOn(2, '18:15')->timezone('Africa/Lagos');
     }
 
     /**
