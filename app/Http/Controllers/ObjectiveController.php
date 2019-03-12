@@ -83,7 +83,7 @@ class ObjectiveController extends Controller
      */
     public function show(Objective $objective)
     {
-        if (!$objective) {
+        if (!$objective->exists) {
             return response()->json([
                 'success' => false,
                 'message' => 'Objective with id ' . $objective->id . ' not found'
@@ -118,7 +118,7 @@ class ObjectiveController extends Controller
     {
         if (auth()->user()->role->id == Constants::admin_role_id || auth()->user()->role->id == Constants::hr_role_id ||
             (auth()->user()->role->id == Constants::unit_lead_role_id && auth()->user()->id == $objective->unit->unit_lead)){
-            if (!$objective) {
+            if (!$objective->exists) {
                 return response()->json([
                     'success' => false,
                     'message' => 'Objective with id ' . $objective->id . ' not found'

@@ -11,6 +11,9 @@ class Task extends Model
         return $this->belongsTo(IndGoal::class);
     }
     public function ipm(){
-        return $this->belongsTo(IPM::class);
+        return $this->belongsTo(IPM::class,'ipm_id');
+    }
+    public function employee(){
+        return $this->belongsTo(IPM::class,'employee_id');
     }
 }

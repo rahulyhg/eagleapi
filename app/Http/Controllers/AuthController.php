@@ -87,7 +87,7 @@ class AuthController extends Controller
 
         if (auth()->attempt($credentials)) {
             $token = auth()->user()->createToken($request->email)->accessToken;
-            return response()->json(['success' => true,'token' => 'Bearer ' . $token], 200);
+            return response()->json(['success' => true,'user'=>auth()->user(),'token' => 'Bearer ' . $token], 200);
         } else {
             return response()->json(['success' => false,'message' => 'The login details are incorrect'], 401);
         }

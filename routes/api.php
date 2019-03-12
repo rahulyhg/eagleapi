@@ -24,7 +24,6 @@ Route::middleware('auth:api')->prefix('v1')->group(function () {
     Route::post('user/hr/{user}', 'AuthController@set_hr');
     Route::post('user/demote_hr/{user}', 'AuthController@demote_hr');
     Route::get('user/{id}', 'UserController@show');
-    Route::get('user/{id}', 'UserController@show');
     Route::patch('user/update', 'UserController@update');
     Route::patch('user/admin_update/{id}', 'UserController@adminUpdate');
     Route::resource('goals', 'GoalController');
@@ -39,6 +38,8 @@ Route::middleware('auth:api')->prefix('v1')->group(function () {
     Route::resource('objectives', 'ObjectiveController');
     Route::resource('roles', 'RoleController');
     Route::resource('tasks', 'TaskController');
+    Route::post('tasks/approve/{task}', 'TaskController@approve');
+    Route::post('tasks/complete/{task}', 'TaskController@complete');
     Route::resource('units', 'UnitController');
     Route::resource('visions', 'VisionController');
 });

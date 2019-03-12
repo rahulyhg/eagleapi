@@ -76,7 +76,7 @@ class UnitController extends Controller
      */
     public function show(Unit $unit)
     {
-        if (!$unit) {
+        if (!$unit->exists) {
             return response()->json([
                 'success' => false,
                 'message' => 'Unit with id ' . $unit->id . ' not found'
@@ -110,7 +110,7 @@ class UnitController extends Controller
     public function update(Request $request, Unit $unit)
     {
         if (auth()->user()->role->id == Constants::admin_role_id) {
-            if (!$unit) {
+            if (!$unit->exists) {
                 return response()->json([
                     'success' => false,
                     'message' => 'Unit with id ' . $unit->id . ' not found'
@@ -128,7 +128,6 @@ class UnitController extends Controller
                     'message' => 'Unit could not be updated'
                 ], 500);
         }else {
-
             return response()->json(["success"=>false,"message"=>"User does not have required access permission."],403);
         }
     }

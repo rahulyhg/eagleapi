@@ -72,8 +72,7 @@ class IPMController extends Controller
      */
     public function show(IPM $ipm)
     {
-        dd($ipm);
-        if (!$ipm) {
+        if (!$ipm->exists) {
             return response()->json([
                 'success' => false,
                 'message' => 'IPM with id ' . $ipm->id . ' not found'
