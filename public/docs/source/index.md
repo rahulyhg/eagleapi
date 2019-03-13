@@ -372,8 +372,8 @@ $.ajax(settings).done(function (response) {
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/goals" \
 -H "Accept: application/json" \
     -d "content"="repudiandae" \
-    -d "start_date"="2014-12-16" \
-    -d "end_date"="2014-12-16" \
+    -d "start_date"="2014-12-17" \
+    -d "end_date"="2014-12-17" \
 
 ```
 
@@ -385,8 +385,8 @@ var settings = {
     "method": "POST",
     "data": {
         "content": "repudiandae",
-        "start_date": "2014-12-16",
-        "end_date": "2014-12-16"
+        "start_date": "2014-12-17",
+        "end_date": "2014-12-17"
 },
     "headers": {
         "accept": "application/json"
@@ -489,6 +489,78 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_0c9c0db58496769199051f473940bda0 -->
 
+#Home
+This is for requests relating to home. E.g. Landing Page
+<!-- START_1c898f1a016181c01c0121dbf98f49a7 -->
+## Landing Page. Returns Vision and Goals
+
+> Example request:
+
+```bash
+curl -X GET "https://eagleapi.herokuapp.com/api/v1/home/landing" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/home/landing",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "success": true,
+    "data": {
+        "vision": {
+            "id": 2,
+            "content": "To be the top top top company in the world",
+            "start_date": "2019-03-01",
+            "end_date": "2024-03-01",
+            "created_at": "2019-03-11 15:45:48",
+            "updated_at": "2019-03-11 15:52:05"
+        },
+        "goals": [
+            {
+                "id": 2,
+                "start_date": "2019-03-13",
+                "end_date": "2020-03-13",
+                "content": "Next Level",
+                "created_at": "2019-03-13 11:26:37",
+                "updated_at": "2019-03-13 11:26:39"
+            },
+            {
+                "id": 1,
+                "start_date": "2019-03-11",
+                "end_date": "2020-03-11",
+                "content": "Get all clientsssssss",
+                "created_at": "2019-03-11 11:38:36",
+                "updated_at": "2019-03-11 11:42:57"
+            }
+        ]
+    }
+}
+```
+
+### HTTP Request
+`GET api/v1/home/landing`
+
+`HEAD api/v1/home/landing`
+
+
+<!-- END_1c898f1a016181c01c0121dbf98f49a7 -->
+
 #IPM
 
 This is the Model for the employee Individual IPMs
@@ -543,8 +615,8 @@ $.ajax(settings).done(function (response) {
 ```bash
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/ipms" \
 -H "Accept: application/json" \
-    -d "start_date"="1982-12-18" \
-    -d "end_date"="1982-12-18" \
+    -d "start_date"="1982-12-19" \
+    -d "end_date"="1982-12-19" \
 
 ```
 
@@ -555,8 +627,8 @@ var settings = {
     "url": "https://eagleapi.herokuapp.com/api/v1/ipms",
     "method": "POST",
     "data": {
-        "start_date": "1982-12-18",
-        "end_date": "1982-12-18"
+        "start_date": "1982-12-19",
+        "end_date": "1982-12-19"
 },
     "headers": {
         "accept": "application/json"
@@ -949,8 +1021,8 @@ $.ajax(settings).done(function (response) {
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/keyresults" \
 -H "Accept: application/json" \
     -d "content"="consequatur" \
-    -d "start_date"="2009-11-13" \
-    -d "end_date"="2009-11-13" \
+    -d "start_date"="2009-11-14" \
+    -d "end_date"="2009-11-14" \
     -d "objective_id"="consequatur" \
 
 ```
@@ -963,8 +1035,8 @@ var settings = {
     "method": "POST",
     "data": {
         "content": "consequatur",
-        "start_date": "2009-11-13",
-        "end_date": "2009-11-13",
+        "start_date": "2009-11-14",
+        "end_date": "2009-11-14",
         "objective_id": "consequatur"
 },
     "headers": {
@@ -1090,8 +1162,8 @@ $.ajax(settings).done(function (response) {
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/objectives" \
 -H "Accept: application/json" \
     -d "content"="nihil" \
-    -d "start_date"="1990-10-05" \
-    -d "end_date"="1990-10-05" \
+    -d "start_date"="1990-10-06" \
+    -d "end_date"="1990-10-06" \
     -d "unit_id"="nihil" \
 
 ```
@@ -1104,8 +1176,8 @@ var settings = {
     "method": "POST",
     "data": {
         "content": "nihil",
-        "start_date": "1990-10-05",
-        "end_date": "1990-10-05",
+        "start_date": "1990-10-06",
+        "end_date": "1990-10-06",
         "unit_id": "nihil"
 },
     "headers": {
@@ -2115,8 +2187,8 @@ $.ajax(settings).done(function (response) {
 curl -X POST "https://eagleapi.herokuapp.com/api/v1/visions" \
 -H "Accept: application/json" \
     -d "content"="in" \
-    -d "start_date"="1989-09-17" \
-    -d "end_date"="1989-09-17" \
+    -d "start_date"="1989-09-18" \
+    -d "end_date"="1989-09-18" \
 
 ```
 
@@ -2128,8 +2200,8 @@ var settings = {
     "method": "POST",
     "data": {
         "content": "in",
-        "start_date": "1989-09-17",
-        "end_date": "1989-09-17"
+        "start_date": "1989-09-18",
+        "end_date": "1989-09-18"
 },
     "headers": {
         "accept": "application/json"

@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::post('v1/user/login', 'AuthController@login');
+Route::get('v1/home/landing', 'HomeController@landing');
+
 
 Route::middleware('auth:api')->prefix('v1')->group(function () {
     Route::post('user/create', 'AuthController@store');
