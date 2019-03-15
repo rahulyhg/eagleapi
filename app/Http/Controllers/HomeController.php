@@ -28,4 +28,13 @@ class HomeController extends Controller
             'data' => ['vision'=>$vision,'goals'=>$goals]
         ],200);
     }
+    public function dashboard()
+    {
+        $vision = Vision::all()->last();
+        $goals = Goal::orderBy('created_at','desc')->take(2)->get();
+        return response()->json([
+            'success' => true,
+            'data' => ['vision'=>$vision,'goals'=>$goals]
+        ],200);
+    }
 }

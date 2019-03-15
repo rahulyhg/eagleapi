@@ -24,7 +24,7 @@ class UserController extends Controller
     {
         return response()->json([
             'success' => true,
-            'data' => User::all()
+            'data' => User::with(['unit','supervisor','role'])
         ],200);
     }
 
