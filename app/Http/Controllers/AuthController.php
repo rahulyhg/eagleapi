@@ -125,6 +125,7 @@ class AuthController extends Controller
                     'message' => 'User with id ' . $user->id . ' not found'
                 ], 400);
             }
+            if ($user->role->id != Constants::admin_role_id)
             $user->role_id = Constants::unit_lead_role_id;
             $unit->unit_lead = $user->id;
             if ($user->save() && $unit->save())
