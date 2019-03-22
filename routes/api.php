@@ -34,6 +34,7 @@ Route::middleware('auth:api')->prefix('v1')->group(function () {
     Route::patch('ind_goals/disapprove/{id}','IndGoalController@disapprove');
     Route::patch('ind_goals/complete/{id}','IndGoalController@complete');
     Route::resource('ipms', 'IPMController');
+    Route::get('current_ipm','IPMController@current');
     Route::get('keyresults', 'KeyResultController@index');
     Route::post('keyresults', 'KeyResultController@store');
     Route::patch('keyresults/{id}', 'KeyResultController@update');

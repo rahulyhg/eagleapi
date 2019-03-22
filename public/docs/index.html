@@ -375,8 +375,8 @@ $.ajax(settings).done(function (response) {
 <pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/goals" \
 -H "Accept: application/json" \
     -d "content"="repudiandae" \
-    -d "start_date"="2014-12-17" \
-    -d "end_date"="2014-12-17" \
+    -d "start_date"="2014-12-25" \
+    -d "end_date"="2014-12-25" \
 </code></pre>
 <pre><code class="language-javascript">var settings = {
     "async": true,
@@ -385,8 +385,8 @@ $.ajax(settings).done(function (response) {
     "method": "POST",
     "data": {
         "content": "repudiandae",
-        "start_date": "2014-12-17",
-        "end_date": "2014-12-17"
+        "start_date": "2014-12-25",
+        "end_date": "2014-12-25"
 },
     "headers": {
         "accept": "application/json"
@@ -581,8 +581,9 @@ $.ajax(settings).done(function (response) {
 </blockquote>
 <pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/ipms" \
 -H "Accept: application/json" \
-    -d "start_date"="1982-12-19" \
-    -d "end_date"="1982-12-19" \
+    -d "start_date"="1982-12-21" \
+    -d "end_date"="1982-12-21" \
+    -d "week_name"="voluptatem" \
 </code></pre>
 <pre><code class="language-javascript">var settings = {
     "async": true,
@@ -590,8 +591,9 @@ $.ajax(settings).done(function (response) {
     "url": "https://eagleapi.herokuapp.com/api/v1/ipms",
     "method": "POST",
     "data": {
-        "start_date": "1982-12-19",
-        "end_date": "1982-12-19"
+        "start_date": "1982-12-21",
+        "end_date": "1982-12-21",
+        "week_name": "voluptatem"
 },
     "headers": {
         "accept": "application/json"
@@ -622,6 +624,11 @@ $.ajax(settings).done(function (response) {
 <tr>
 <td>end_date</td>
 <td>date</td>
+<td>required</td>
+</tr>
+<tr>
+<td>week_name</td>
+<td>string</td>
 <td>required</td>
 </tr>
 </tbody>
@@ -657,6 +664,36 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/v1/ipms/{ipm}</code></p>
 <p><code>HEAD api/v1/ipms/{ipm}</code></p>
 <!-- END_740e99e2c0880fdccea718d3b49dc814 -->
+<!-- START_257edfba917a689f8d8e0a509c33cf17 -->
+<h2>Show the user&#039;s current IPM</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET "https://eagleapi.herokuapp.com/api/v1/current_ipm" \
+-H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "https://eagleapi.herokuapp.com/api/v1/current_ipm",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/v1/current_ipm</code></p>
+<p><code>HEAD api/v1/current_ipm</code></p>
+<!-- END_257edfba917a689f8d8e0a509c33cf17 -->
 <h1>IndGoal</h1>
 <p>This is the Model for the employee Individual Goals
 Attributes are: content(String), start_date(date), end_date(date), approved(boolean), status(boolean) to indicate completion, employee_id(integer)</p>
@@ -698,8 +735,8 @@ $.ajax(settings).done(function (response) {
 <pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/ind_goals" \
 -H "Accept: application/json" \
     -d "content"="voluptas" \
-    -d "start_date"="2007-08-08" \
-    -d "end_date"="2007-08-08" \
+    -d "start_date"="2007-08-15" \
+    -d "end_date"="2007-08-15" \
 </code></pre>
 <pre><code class="language-javascript">var settings = {
     "async": true,
@@ -708,8 +745,8 @@ $.ajax(settings).done(function (response) {
     "method": "POST",
     "data": {
         "content": "voluptas",
-        "start_date": "2007-08-08",
-        "end_date": "2007-08-08"
+        "start_date": "2007-08-15",
+        "end_date": "2007-08-15"
 },
     "headers": {
         "accept": "application/json"
@@ -914,8 +951,8 @@ $.ajax(settings).done(function (response) {
 <pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/keyresults" \
 -H "Accept: application/json" \
     -d "content"="consequatur" \
-    -d "start_date"="2009-11-14" \
-    -d "end_date"="2009-11-14" \
+    -d "start_date"="2009-11-21" \
+    -d "end_date"="2009-11-21" \
     -d "objective_id"="consequatur" \
 </code></pre>
 <pre><code class="language-javascript">var settings = {
@@ -925,8 +962,8 @@ $.ajax(settings).done(function (response) {
     "method": "POST",
     "data": {
         "content": "consequatur",
-        "start_date": "2009-11-14",
-        "end_date": "2009-11-14",
+        "start_date": "2009-11-21",
+        "end_date": "2009-11-21",
         "objective_id": "consequatur"
 },
     "headers": {
@@ -1060,8 +1097,8 @@ $.ajax(settings).done(function (response) {
 <pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/objectives" \
 -H "Accept: application/json" \
     -d "content"="nihil" \
-    -d "start_date"="1990-10-06" \
-    -d "end_date"="1990-10-06" \
+    -d "start_date"="1990-10-09" \
+    -d "end_date"="1990-10-09" \
     -d "unit_id"="nihil" \
 </code></pre>
 <pre><code class="language-javascript">var settings = {
@@ -1071,8 +1108,8 @@ $.ajax(settings).done(function (response) {
     "method": "POST",
     "data": {
         "content": "nihil",
-        "start_date": "1990-10-06",
-        "end_date": "1990-10-06",
+        "start_date": "1990-10-09",
+        "end_date": "1990-10-09",
         "unit_id": "nihil"
 },
     "headers": {
@@ -1881,8 +1918,8 @@ $.ajax(settings).done(function (response) {
 <pre><code class="language-bash">curl -X POST "https://eagleapi.herokuapp.com/api/v1/visions" \
 -H "Accept: application/json" \
     -d "content"="in" \
-    -d "start_date"="1989-09-18" \
-    -d "end_date"="1989-09-18" \
+    -d "start_date"="1989-09-21" \
+    -d "end_date"="1989-09-21" \
 </code></pre>
 <pre><code class="language-javascript">var settings = {
     "async": true,
@@ -1891,8 +1928,8 @@ $.ajax(settings).done(function (response) {
     "method": "POST",
     "data": {
         "content": "in",
-        "start_date": "1989-09-18",
-        "end_date": "1989-09-18"
+        "start_date": "1989-09-21",
+        "end_date": "1989-09-21"
 },
     "headers": {
         "accept": "application/json"

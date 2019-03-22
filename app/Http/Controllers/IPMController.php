@@ -120,4 +120,17 @@ class IPMController extends Controller
     {
         //
     }
+
+
+    /**
+     * Show the user's current IPM
+     * @return \Illuminate\Http\Response
+     */
+    public function current()
+    {
+        return response()->json([
+            'success' => true,
+            'data' => IPM::with(['tasks','employee'])->where("employee_id","=",auth()->user()->id)->orderBy("id","desc")->first()
+        ], 200);
+    }
 }
