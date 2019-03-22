@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Cron;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -24,8 +25,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-         $schedule->command('command:ipm')
-             ->weeklyOn(2, '18:15')->timezone('Africa/Lagos');
+        $schedule->command('command:ipm')
+            ->everyMinute()->when(function() {
+                return Cron::shouldIRun('command:ipm', env("IPM_INTERVAL",10080));
+            });
     }
 
     /**
