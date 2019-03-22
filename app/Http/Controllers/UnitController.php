@@ -17,7 +17,7 @@ class UnitController extends Controller
     /**
      * Display a listing of the Units.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response0
      */
     public function index()
     {

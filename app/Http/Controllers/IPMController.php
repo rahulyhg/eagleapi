@@ -47,10 +47,12 @@ class IPMController extends Controller
         $validatedData = $request->validate([
             'start_date' => 'required|date',
             'end_date' => 'required|date',
+            'week_name' => 'required|string',
         ]);
             $ipm = new IPM();
             $ipm->start_date = $request->get('start_date');
             $ipm->end_date = $request->get('end_date');
+            $ipm->week_name = $request->get('week_name');
             $ipm->employee_id = auth()->user()->id;
             if ($ipm->save())
                 return response()->json([
