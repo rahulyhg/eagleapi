@@ -18,7 +18,7 @@ class Cron extends Model
     public static function shouldIRun($command, $minutes) {
         $cron = Cron::find($command);
         $now  = Carbon::now();
-        if ($cron && $cron->next_run > $now->timestamp || !($now->isDayOfWeek(Carbon::MONDAY))) {
+        if ($cron && $cron->next_run > $now->timestamp) {
             return false;
         }
         Cron::updateOrCreate(
