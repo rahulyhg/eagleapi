@@ -174,16 +174,12 @@ class TaskController extends Controller
      */
     public function complete(Request $request, Task $task)
     {
-        $validatedData = $request->validate([
-            'rating' => 'required|integer'
-        ]);
         if (!$task->exists) {
             return response()->json([
                 'success' => false,
                 'message' => 'Task with id ' . $task->id . ' not found'
             ], 400);
         }
-        $task->rating = $request->get('rating');
         if ($task->save())
             return response()->json([
                 'success' => true,
