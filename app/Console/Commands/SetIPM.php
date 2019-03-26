@@ -43,8 +43,8 @@ class SetIPM extends Command
         foreach (User::all() as $user){
             $ipm = new IPM();
             $ipm->start_date = Carbon::today();
-            $ipm->week_name = Carbon::now()->monthName . " Week ". Carbon::now()->weekOfMonth;
-            $ipm->end_date = Carbon::today()->addDays(4);
+            $ipm->week_name = Carbon::today()->monthName . " Week ". Carbon::today()->weekOfMonth;
+            $ipm->end_date = Carbon::today()->lastWeekDay;
             $ipm->employee_id = $user->id;
             $ipm->save();
         }
